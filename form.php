@@ -32,6 +32,13 @@
     <meta name="theme-color" content="#fafafa">
 </head>
 <body>
+  
+  <?php
+
+  ?>
+
+
+
 
     <div class="container">
       <!--Where the logo should be placed-->

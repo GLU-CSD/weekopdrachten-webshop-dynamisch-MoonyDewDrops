@@ -34,45 +34,12 @@
 
 <body>
 
+<?php
+
+?>
+
   <!--Container that contains everything-->
   <div class="container">
-
-    <!--Where the logo should be placed-->
-    <div class="logo">
-      <div>
-        <img src="assets/Images/realLogo.jpg" alt="SharaX" 
-        style="height: 30px; width: 70px;">
-      </div>
-    </div>
-
-    <!--Search balk-->
-    <div class="search">
-      <input type="text" placeholder="Search..?">
-    </div>
-
-    <!--Thing with the account, cart & favourite button-->
-    <div class="addons">
-
-      <button type="button" onclick="link()">
-        Acc
-      </button>
-
-      <button type="button" class="cart" id="ItemCounter" onclick="goToLink()">   
-          0
-      </button>
-
-      <button type="button" onclick="link()">
-        Liked
-      </button>
-
-    </div>
-
-    <!--where things like home, new & sale r placed-->
-    <div class="additional-info">
-      <button type="button" onclick="link()">Home</button>
-      <button type="button" onclick="link()">New</button>
-      <button type="button" onclick="link()">Sale</button>
-    </div>
 
     <!--the thing that filters everything-->
     <div class="Filter">
@@ -136,6 +103,7 @@
       </div>
 
     </div>
+
 
     <!--Thing where products r inside-->
     <div class="products">
@@ -326,36 +294,6 @@
 
 
     </div>
-
-    <!--the footer witht he copyright info, the about SharaX & Where to go for help-->
-    <div class="disclaimer">
-      <div id="about" style="padding: 5%;">
-        <p>About SharaX</p>
-        <p></p>
-        <br>
-        <p><a href="https://www.youtube.com/user/SharaXChannel">Youtube</a>, 
-          <a href="https://soundcloud.com/sharaxsierra">Sound-
-            cloud</a></p>
-      </div>
-      <div id="copyRight" style="padding: 5%;">
-        <p>Copyright</p>
-        <p> </p>
-        <p>All content displayed here belongs to their respective owners</p>
-        <p>I do not claim any ownership over the pictures and songs displayed here</p>
-        <p>©Julia Brouwer 2024</p>
-      </div>
-      <div id="help" style="padding: 5%;">
-        <p>Help</p>
-        <Br>
-        <p>When in need of help, don't hesitate to reach out to us via our e-mail if you have any 
-          questions concern a purchase.
-        </p>
-        <p><a href="http://127.0.0.1:5500/">Support</a></p>
-        <p><a href="http://127.0.0.1:5500/">FAQ</a></p>
-      </div>
-    </div>
-
-  </div>
 
   <!--Thing that links the javascript to this document-->
   <script src="assets/js/app.js"></script>
