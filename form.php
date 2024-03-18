@@ -7,17 +7,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-  
+    <title>Form</title>
     <link rel="stylesheet" href="assets/css/0TopBalk.css">
-    
     <link rel="stylesheet" href="assets/css/1navigationBalk.css">
-  
     <link rel="stylesheet" href="assets/css/footer.css">
-
     <link rel="stylesheet" href="assets/css/formStyle.css">
-  
-  
+
     <meta name="description" content=""> 
   
     <meta property="og:title" content="">
@@ -28,7 +23,6 @@
   
     <link rel="shortcut icon" href="assets/Images/favicon.ico">
   
-    
     <meta name="theme-color" content="#fafafa">
 </head>
 <body>
@@ -41,42 +35,10 @@
 
 
     <div class="container">
-      <!--Where the logo should be placed-->
-      <div class="logo">
-          <div>
-            <img src="assets/Images/realLogo.jpg" alt="SharaX" 
-            style="height: 30px; width: 70px;">
-          </div>
-      </div>
-  
-      <!--Search balk-->
-      <div class="search">
-        <input type="text" placeholder="Search..?">
-      </div>
-  
-      <!--Thing with the account, cart & favourite button-->
-      <div class="addons">
-  
-        <button type="button" onclick="link()">
-          Acc
-        </button>
-      
-        <button type="button" class="cart" id="ItemCounter" onclick="goToLink()">   
-            0
-        </button>
-  
-        <button type="button" onclick="link()">
-          Liked
-        </button>
-  
-      </div>
-  
-      <!--where things like home, new & sale r placed-->
-      <div class="additional-info">
-        <button type="button" onclick="link()">Home</button>
-        <button type="button" onclick="link()">New</button>
-        <button type="button" onclick="link()">Sale</button>
-      </div>
+
+    <?php
+    include 'header.php';
+    ?>
 
       <div class="bestelling">
 
@@ -171,7 +133,13 @@
             <p><a href="http://127.0.0.1:5500/">FAQ</a></p>
           </div>
         </div>
+
+        <?php
+        include 'footer.php';
+        ?>
     </div>
+
+
     <script src="assets/js/app.js"></script>
 
     

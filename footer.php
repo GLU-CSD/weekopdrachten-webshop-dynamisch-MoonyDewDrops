@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Footer</title>
 </head>
 <body>
     <?php
 
     ?>
-<div class="container">
+
     <!--the footer witht he copyright info, the about SharaX & Where to go for help-->
     <div class="disclaimer">
       <div id="about" style="padding: 5%;">
@@ -37,8 +37,6 @@
         <p><a href="http://127.0.0.1:5500/">FAQ</a></p>
       </div>
     </div>
-
-  </div>
 
 </body>
 </html>

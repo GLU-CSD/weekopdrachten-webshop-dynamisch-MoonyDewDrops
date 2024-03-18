@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Header</title>
 </head>
 <body>
 
@@ -11,7 +11,6 @@
 
 ?>
 
-<div class="container">
 
 <!--Where the logo should be placed-->
 <div class="logo">
@@ -50,7 +49,8 @@
   <button type="button" onclick="link()">Sale</button>
 </div>
 
-</div>
+  <!--Thing that links the javascript to this document-->
+  <script src="assets/js/app.js"></script>
     
 </body>
 </html>
