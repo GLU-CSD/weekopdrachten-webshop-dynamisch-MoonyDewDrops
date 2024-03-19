@@ -50,7 +50,22 @@
 </div>
 
   <!--Thing that links the javascript to this document-->
-  <script src="assets/js/app.js"></script>
+  <script>
+
+    //the function to send it to the site
+
+    function link() {
+      //window.location.href = "https://u230062.gluwebsite.nl/web/WebshopJulia/";
+      window.location.href = "index.php";
+
+    }
+
+
+    function goToLink() {
+      window.location.href = "form.php";
+    }
+
+    </script>
     
 </body>
 </html>

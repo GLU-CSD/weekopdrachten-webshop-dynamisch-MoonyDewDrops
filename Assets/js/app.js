@@ -24,11 +24,21 @@ function addProduct(){
 //the function to send it to the site
 function link() {
   //window.location.href = "https://u230062.gluwebsite.nl/web/WebshopJulia/";
-  window.location.href = "index.html";
+  window.location.href = "index.php";
 
 }
 
 function goToLink() {
-  window.location.href = "form.html";
+  window.location.href = "form.php";
 }
+
+//let GrootPlaatje = document.getElementsByiD("GrootPlaatjesClass");
+
+//GrootPlaatje.addEventListener("click", () => {
+
+  //let klein = document.getElementsByClassName("ClassOfSmallPictures");
+
+  //GrootPlaatje.src = klein.src;
+//})
+
 
