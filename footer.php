@@ -38,8 +38,7 @@
       </div>
     </div>
 
-      <!--Thing that links the javascript to this document-->
-  <script src="assets/js/app.js"></script>
+
 
 </body>
 </html>

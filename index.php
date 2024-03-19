@@ -244,40 +244,20 @@ Inside here r the image, name, price & add to cart button-->
 
 </div>
 
+<?php
+foreach ($products as $product) {
+  if (!empty($product['id'])) {
+      echo $product['id'];
+  } else {
+      echo "No id found";
+  }
+}
+?>
 
 
       <!--Thing that links the javascript to this document-->
       <script src="assets/js/app.js"></script>
-  
-<!--Temporary fix for js--> 
-  <script>
-
-    //creates counter for cart
-    var ItemCounter = 0;
-
-    //gets the id of the button
-
-    const counterDiv = document.getElementById("ItemCounter");
-  
-    //adds the numbers like a pro
-    function addProduct(){
-      ItemCounter++;
-      counterDiv.innerHTML = ItemCounter;
-    }
-  
-    //the function to send it to the site
-    function link() {
-      //window.location.href = "https://u230062.gluwebsite.nl/web/WebshopJulia/";
-      window.location.href = "index.php";
-  
-    }
-  
-    function goToLink() {
-      window.location.href = "form.php";  
-    }
-
-  </script>
-
+      
 </body>
 
 </html>
