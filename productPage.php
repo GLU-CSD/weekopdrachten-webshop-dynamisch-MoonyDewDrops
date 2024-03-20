@@ -23,7 +23,12 @@
 
     <!--Here goes product thingy-->
     <div class="product">
+      <?php
 
+      $id = $_GET['id'];
+      
+      echo $id;
+      ?>
     
     </div>
     

@@ -25,9 +25,14 @@
   <link rel="shortcut icon" href="assets/Images/favicon.ico">
   <meta name="theme-color" content="#fafafa">
 
+        <!--Thing that links the javascript to this document-->
+        <script defer src="assets/js/app.js"></script>
+
 </head>
 
 <body>
+
+
 
 <?php
 ?>
@@ -37,7 +42,7 @@
 
 
     <?php
-    include 'header.php';
+    include_once 'header.php';
     ?>
 
 
@@ -45,22 +50,57 @@
       include 'filter.php';
     ?>
 
+    <?php
+    include 'products.php';
+
+  //   foreach ($products as $product) {
+  //     if (!empty($product['title'])) {
+  //         echo $product['title'];
+  //         echo "<br>";
+  //     } else {
+  //         echo "No title found";
+  //     }
+  // }
+    ?>
 
 <!--Thing where products r inside-->
 <div class="products">
 
 <!--the start of the products. Has the cover image of the song, n height&width inside it. 
 Inside here r the image, name, price & add to cart button-->
-<div id="product1" class="product-item">
+
+<?php
+    foreach ($products as $product) {
+      echo '<div id="product" class="product-item">
+      
+      <img src="'.$product['photo'].'" alt="'.$product['title'].'" 
+   style="width: 100%; height: auto">
+  <a href="productPage.php?'.$product['id'].'">'.$product['title'].'</a>
+  <p>€'.$product['price'].'</p>
+  <br>
+  <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
+    </div>';
+      // if (!empty($product['title'])) {
+      //     echo $product['title'];
+      //     echo "<br>";
+      // } else {
+      //     echo "No title found";
+      // }
+  }
+?>
+
+<!--
+<div id="product1" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b27337f7b15671c5778cf0a24408" alt="Stone Cold Killer - Dusttale Original" 
   style="width: 100%; height: auto">
   <a href="https://open.spotify.com/album/7yGkXnEDXsVlXC8oF16FTn">Stone Cold Killer - Dusttale Orginal</a><!--This will be link to product page-->
+  <!--
   <p>€17,99</p>
   <br>
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product2" class="product-item">
+<div id="product2" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b2735eeb8bef2852830aca370ecc" alt="V.I.P. - Dreamtale Original"
   style="max-width: 100%; height: auto">
   <a href="https://open.spotify.com/album/59OVswOUZAdYVAeq9zs9DR">V.I.P. - Dreamtale Original</a>
@@ -69,7 +109,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product3" class="product-item">
+<div id="product3" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b273edc69ca99ecaa858859916d6" alt="Disbelief - Undertale Remix"
   style="max-width: 100%; height: auto">
   <p>Disbelief - Undertale Remix</p>
@@ -77,7 +117,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product4" class="product-item">
+<div id="product4" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b27393e217d47ab46afb24e2add4" alt="Infamous - Dusttale Original"
   style="max-width: 100%; height: auto">
   <p>Infamous - Dusttale Original</p>
@@ -86,7 +126,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product5" class="product-item">
+<div id="product5" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b2734bd80a0cd131f21debd0d07d" alt="Dark Darker Yet Monster - Undertale Remix"
   style="max-width: 100%; height: auto">
   <p>Dark Darker Yet Monster - Undertale Remix</p>
@@ -94,7 +134,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product6" class="product-item">
+<div id="product6" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b27363bbb4ed7019cd5d3c515d08" alt="Tokyovania[Sans & Papyrus Vocals] - Undertale Remix"
   style="max-width: 100%; height: auto">
   <p>Tokyovania[Sans & Papyrus Vocals] - Undertale Remix</p>
@@ -102,7 +142,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product7" class="product-item">
+<div id="product7" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b273d887b8e4146632d47ab0c6ee" alt="Megalotrousle - Undertale Remix"
   style="max-width: 100%; height: auto">
   <p>Megalotrousle - Undertale Remix</p>
@@ -111,7 +151,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product8" class="product-item">
+<div id="product8" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b273b46c6f2180b6a41487fed6d0" alt="Darker Yet Darker - Undertale Remix"
   style="max-width: 100%; height: auto">
   <p>Darker yet Darker - Undertale Remix</p>
@@ -120,7 +160,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product9" class="product-item">
+<div id="product9" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b2734ae9002283502758b498d615" alt="Battle Against a True Hero - Undertale Remix"
   style="max-width: 100%; height: auto">
   <p>Battle Against a True Hero - Undertale Remix</p>
@@ -128,7 +168,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product10" class="product-item">
+<div id="product10" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b27361c527fbc1d9bd0b09ef7da1" alt="Defiance - Underfell Original"
   style="max-width: 100%; height: auto">
   <p>Defiance - Underfell Original</p>
@@ -136,7 +176,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product11" class="product-item">
+<div id="product11" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b273ffbee89074df18aeb7b61c58" alt="Psychostasia - Errortale Orginal"
   style="max-width: 100%; height: auto" >
   <p>Psychostasia - Errortale Original</p>
@@ -146,7 +186,7 @@ Inside here r the image, name, price & add to cart button-->
   </div>
 </div>
 
-<div id="product12" class="product-item">
+<div id="product12" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b27390929a488d253121a9e8a2d6" alt="Attack of the Killer Queen - Deltarune Remix"
   style="max-width: 100%; height: auto">
   <p>Attack of the Killer Queen - Deltarune Remix</p>
@@ -154,7 +194,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product13" class="product-item">
+<div id="product13" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b2736a487b8ee6230dceba4725f2" alt="Obsession - Dusttale Original"
   style="max-width: 100%; height: auto">
   <p>Obsession - Dusttale Original</p>
@@ -162,7 +202,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product14" class="product-item">
+<div id="product14" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b27344c914f478ca06b3fe8076a2" alt="BIG SHOT - Deltarune Remix"
   style="max-width: 100%; height: auto">
   <p>BIG SHOT - Deltarune Remix</p>
@@ -170,7 +210,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product15" class="product-item">
+<div id="product15" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b273a835e1228c922fdcb8fc9feb" alt="what"
   style="max-width: 100%; height: auto">
   <p>Fun With Electrostatic - Errortale Remix</p>
@@ -178,7 +218,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product16" class="product-item">
+<div id="product16" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b273bce6b3d91965fe4b8fa47ed6" alt="Hysterical - Deltarune Remix"
   style="max-width: 100%; height: auto">
   <p>Hysterical - Deltarune Remix</p>
@@ -186,7 +226,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product17" class="product-item">
+<div id="product17" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b2731ee6236a101898abb7a2e161" alt="Spear of a True Hero - Undertale Remix"
   style="max-width: 100%; height: auto">
   <p>Spear of a True Hero - Undertale Remix</p>
@@ -194,7 +234,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product18" class="product-item">
+<div id="product18" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b273eb11675bbb9873e9d96ff650" alt="huh"
   style="max-width: 100%; height: auto">
   <p>Rewind - Undertale Original</p>
@@ -202,7 +242,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product19" class="product-item">
+<div id="product19" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b27389b5314333251f420d1c09a0" alt="Red Light - Underfell Original"
   style="max-width: 100%; height: auto">
   <p>Red Light - Underfell Original</p>
@@ -210,7 +250,7 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product20" class="product-item">
+<div id="product20" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b2731fc2f5ab28c832a1094df62b" alt="Hello World - Aftertale Original"
   style="max-width: 100%; height: auto">
   <p>Hello World - Aftertale Original</p>
@@ -218,13 +258,14 @@ Inside here r the image, name, price & add to cart button-->
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
 </div>
 
-<div id="product21" class="product-item">
+<div id="product21" class="product-item" onclick="productPage()">
   <img src="https://i.scdn.co/image/ab67616d0000b2731f13ee83ecc3a4bc08dce62b" alt="huh"
   style="max-width: 100%; height: auto">
   <p>Pandemic - Underfresh Original</p>
   <p>€15,99</p>
   <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
-</div>
+ -->
+
 
 
 <!--The next page box that already works but just need to see if i rlly need it in the end. Otherwise remove this later-->
@@ -245,18 +286,8 @@ Inside here r the image, name, price & add to cart button-->
 </div>
 
 <?php
-foreach ($products as $product) {
-  if (!empty($product['id'])) {
-      echo $product['id'];
-  } else {
-      echo "No id found";
-  }
-}
+
 ?>
-
-
-      <!--Thing that links the javascript to this document-->
-      <script src="assets/js/app.js"></script>
       
 </body>
 

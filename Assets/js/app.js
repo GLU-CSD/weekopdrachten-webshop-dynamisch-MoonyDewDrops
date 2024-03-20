@@ -29,18 +29,28 @@ function link() {
 
 }
 
+function test(){
+  alert('aloha');
+}
+
+
 function goToLink() {
   window.location.href = "form.php";
 }
 
-function productPage(){
+function productPage() {
   window.location.href = "productPage.php";
 }
 
+
+
+//maakt een var voor het grote plaatje aan en linkt em naar de class
 //let GrootPlaatje = document.getElementsByiD("GrootPlaatjesClass");
 
+//waarschijnlijk veranderen naar n onclick="changePicture" ding want dit is te ingewikkelt voor zo iets simpels voor mijn brein
 //GrootPlaatje.addEventListener("click", () => {
 
+//maakt var aan voor het kleine plaatje en stopt de pictures d'r in
   //let klein = document.getElementsByClassName("ClassOfSmallPictures");
 
   //GrootPlaatje.src = klein.src;

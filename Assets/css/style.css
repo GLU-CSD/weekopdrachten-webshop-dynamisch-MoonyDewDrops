@@ -9,7 +9,7 @@ body{
   .container {  
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr;
-    grid-template-rows: 0.09fr 0.125fr 5fr 1fr 0.25fr;
+    grid-template-rows: 0.13fr 0.125fr 5fr 1fr 0.25fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -26,12 +26,35 @@ body{
       height: auto;
       background-color: white;
   }
+
+  @media only screen and (max-width: 1040px){
+    .container {  
+      display: grid;
+      grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr;
+      grid-template-rows: 0.27fr 0.125fr 5fr 1fr 0.25fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "logo logo search search addons"
+        "additional-info additional-info additional-info additional-info additional-info"
+        "Filter products products products products"
+        "Filter products products products products"    
+        "disclaimer disclaimer disclaimer disclaimer disclaimer";
+        width: 80%;
+        margin-left: 10%;
+    
+        /*style*/
+        border: 2px solid #6495ED;
+        height: auto;
+        background-color: white;
+    }
+  }
   
   /*For responsiveness. This changes the grid layout so it's better displayed and doesn't bug out*/
   @media only screen and (max-width: 745px){
     .container{
       grid-template-columns: 0.5fr 1fr 1fr;
-      grid-template-rows: 0.04fr 0.2fr 0.4fr 5fr 0.8fr;
+      grid-template-rows: 0.07fr 0.2fr 0.4fr 5fr 0.8fr;
       grid-template-areas:
       "logo search addons"
       "additional-info additional-info additional-info"

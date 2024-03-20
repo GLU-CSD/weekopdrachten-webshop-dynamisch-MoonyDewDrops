@@ -5,21 +5,21 @@ Where everything is sorted into a grid just like the .container class
 .products {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.1fr;
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 0.1fr;*/
     gap: 15px 15px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "product1 product2 product3"
-      "product4 product5 product6"
-      "product7 product8 product9"
-      "product10 product11 product12"
-      "product13 product14 product15"
-      "product16 product17 product18"
-      "product19 product20 product21"
-      "nextPage nextPage nextPage";
+    /*grid-auto-flow: row;*/
     grid-area: products;
-    height: 100%;
     padding: 3%;
+
+    grid-template-areas: 
+    'product product product'
+    'product product product'
+    'product product product'
+    'product product product'
+    'product product product'
+    'product product product'
+    'product product product'
+    'nextPage nextPage nextPage';
   
       /*style*/
   
@@ -35,6 +35,9 @@ Where everything is sorted into a grid just like the .container class
     background-color: white;
     padding: 5%;
     border-radius: 15px;
+
+    width: 1fr;
+
   }
 
   .product-item img{
@@ -49,7 +52,7 @@ Where everything is sorted into a grid just like the .container class
   
   
   /*Grid-area for days. Says where to place the products*/
-  #product1{ 
+  /*#product1{ 
     grid-area: product1; 
   }
   #product2 { 
@@ -112,7 +115,7 @@ Where everything is sorted into a grid just like the .container class
   #product21{
     grid-area: product21;
   }
-  
+  */
   
   /*Thing i already made for when i want to do other pages, like if i want 10 on each page. Maybe make a filter for how many products you want to show per page*/
   #nextPage{
@@ -145,17 +148,17 @@ Where everything is sorted into a grid just like the .container class
       grid-template-columns: 0.5fr 0.5fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas:
-        "product1 product2" /*1*/
-        "product3 product4"/*2*/
-        "product5 product6"/*3*/
-        "product7 product8"/*4*/
-        "product9 product10"/*5*/
-        "product11 product12"/*6*/
-        "product13 product14"/*7*/
-        "product15 product16"/*8*/
-        "product17 product18"/*9*/
-        "product19 product20"/*10*/
-        "product21 blank"/*11*/
+        "product product" /*1*/
+        "product product"/*2*/
+        "product product"/*3*/
+        "product product"/*4*/
+        "product product"/*5*/
+        "product product"/*6*/
+        "product product"/*7*/
+        "product product"/*8*/
+        "product product"/*9*/
+        "product product"/*10*/
+        "product blank"/*11*/
         "nextPage nextPage";/*12*/
       }
   }
@@ -166,27 +169,27 @@ Where everything is sorted into a grid just like the .container class
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas:
-        "product1"
-        "product2" /*1*/
-        "product3" 
-        "product4"/*2*/
-        "product5" 
-        "product6"/*3*/
-        "product7" 
-        "product8"/*4*/
-        "product9" 
-        "product10"/*5*/
-        "product11" 
-        "product12"/*6*/
-        "product13" 
-        "product14"/*7*/
-        "product15" 
-        "product16"/*8*/
-        "product17" 
-        "product18"/*9*/
-        "product19" 
-        "product20"/*10*/
-        "product21" /*11*/
+        "product"
+        "product" /*1*/
+        "product" 
+        "product"/*2*/
+        "product" 
+        "product"/*3*/
+        "product" 
+        "product"/*4*/
+        "product" 
+        "product"/*5*/
+        "product" 
+        "product"/*6*/
+        "product" 
+        "product"/*7*/
+        "product" 
+        "product"/*8*/
+        "product" 
+        "product"/*9*/
+        "product" 
+        "product"/*10*/
+        "product" /*11*/
         "nextPage";/*12*/
     }
   
