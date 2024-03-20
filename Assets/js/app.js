@@ -33,6 +33,10 @@ function goToLink() {
   window.location.href = "form.php";
 }
 
+function productPage(){
+  window.location.href = "productPage.php";
+}
+
 //let GrootPlaatje = document.getElementsByiD("GrootPlaatjesClass");
 
 //GrootPlaatje.addEventListener("click", () => {
