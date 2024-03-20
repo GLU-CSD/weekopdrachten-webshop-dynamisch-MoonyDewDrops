@@ -49,73 +49,7 @@ Where everything is sorted into a grid just like the .container class
     background-color: rgb(235, 235, 235);
     color: #13293D;  
   }
-  
-  
-  /*Grid-area for days. Says where to place the products*/
-  /*#product1{ 
-    grid-area: product1; 
-  }
-  #product2 { 
-    grid-area: product2; 
-  }
-  #product3 { 
-    grid-area: product3; 
-  }
-  #product4 { 
-    grid-area: product4; 
-  }
-  #product5 { 
-    grid-area: product5; 
-  }
-  #product6 { 
-    grid-area: product6; 
-  }
-  #product7 { 
-    grid-area: product7; 
-  }
-  #product8 { 
-    grid-area: product8; 
-  }
-  #product9 { 
-    grid-area: product9; 
-  }
-  #product10 { 
-    grid-area: product10; 
-  }
-  #product11 { 
-    grid-area: product11; 
-  }
-  #product12 { 
-    grid-area: product12; 
-  }
-  #product13 { 
-    grid-area: product13; 
-  }
-  #product14 { 
-    grid-area: product14; 
-  }
-  #product15 { 
-    grid-area: product15; 
-  }
-  #product16 { 
-    grid-area: product16; 
-  }
-  #product17 { 
-    grid-area: product17; 
-  }
-  #product18 { 
-    grid-area: product18; 
-  }
-  #product19 { 
-    grid-area: product19; 
-  }
-  #product20 { 
-    grid-area: product20; 
-  }
-  #product21{
-    grid-area: product21;
-  }
-  */
+
   
   /*Thing i already made for when i want to do other pages, like if i want 10 on each page. Maybe make a filter for how many products you want to show per page*/
   #nextPage{
@@ -145,7 +79,6 @@ Where everything is sorted into a grid just like the .container class
 
   @media only screen and (max-width: 745px){
     .products{      
-      grid-template-columns: 0.5fr 0.5fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas:
         "product product" /*1*/
@@ -163,7 +96,7 @@ Where everything is sorted into a grid just like the .container class
       }
   }
 
-  @media only screen and (max-width: 450px){
+  @media only screen and (max-width: 560px){
     .products{      
 
       grid-template-columns: 1fr;

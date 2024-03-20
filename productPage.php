@@ -28,18 +28,18 @@
     <div class="product">
       <?php
 
-      if(!empty($_GET['title']))
+      if(!empty($_GET['id']))
       {
-        echo $_GET['title'];
+        echo $_GET['id'];
       } else{
-        echo 'title not found :3';
+        echo 'id not found :3';
       }
 
       // if($id == 'abce83e6-9ff1-435f-9189-0e93dcf14829'){
           
       // }
 
-      // $id = $_GET['id'];
+       $id = $_GET['id'];
 
       //$id = $_GET['product['id']'];
       
