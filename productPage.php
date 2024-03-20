@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product page</title>
 
-<!--<link rel="stylesheet" href="assets/css/style.css"> -->
-  <link rel="stylesheet" href="assets/css/0TopBalk.css">
-  <link rel="stylesheet" href="assets/css/1navigationBalk.css">
-  <link rel="stylesheet" href="assets/css/pageProduct.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
+    <!--<link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/0TopBalk.css">
+    <link rel="stylesheet" href="assets/css/1navigationBalk.css">
+    <link rel="stylesheet" href="assets/css/pageProduct.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
-</head>
+    <!--Thing that links the javascript to this document-->
+    <script defer src="assets/js/app.js"></script>
+
+  </head>
 <body>
     
 
@@ -25,9 +28,22 @@
     <div class="product">
       <?php
 
-      $id = $_GET['id'];
+      if(!empty($_GET['title']))
+      {
+        echo $_GET['title'];
+      } else{
+        echo 'title not found :3';
+      }
+
+      // if($id == 'abce83e6-9ff1-435f-9189-0e93dcf14829'){
+          
+      // }
+
+      // $id = $_GET['id'];
+
+      //$id = $_GET['product['id']'];
       
-      echo $id;
+      // echo $id;
       ?>
     
     </div>
