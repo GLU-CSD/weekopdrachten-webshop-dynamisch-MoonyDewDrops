@@ -26,6 +26,7 @@
 
     <!--Here goes product thingy-->
     <div class="product">
+      <br>
       <?php
 
       if(!empty($_GET['id']))
@@ -38,6 +39,7 @@
       // if($id == 'abce83e6-9ff1-435f-9189-0e93dcf14829'){
           
       // }
+      echo '<br>';
 
        $id = $_GET['id'];
 

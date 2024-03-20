@@ -59,7 +59,7 @@
       
         <img src="'.$product['photo'].'" alt="'.$product['title'].'" 
         style="width: 100%; height: auto">
-        <a href="productPage.php?'.$product['id'].'">'.$product['title'].'</a>
+        <a href="productPage.php?id='.$product['id'].'">'.$product['title'].'</a>
         <p>€'.$product['price'].'</p>
         <br>
         <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
