@@ -32,16 +32,16 @@ function productPage() {
 
 
 
-//maakt een var voor het grote plaatje aan en linkt em naar de class
-//let GrootPlaatje = document.getElementsByiD("GrootPlaatjesClass");
+// //maakt een var voor het grote plaatje aan en linkt em naar de class
+// let GrootPlaatje = document.getElementById("bigImage");
 
-//waarschijnlijk veranderen naar n onclick="changePicture" ding want dit is te ingewikkelt voor zo iets simpels voor mijn brein
-//GrootPlaatje.addEventListener("click", () => {
+// // waarschijnlijk veranderen naar n onclick="changePicture" ding want dit is te ingewikkelt voor zo iets simpels voor mijn brein
+// GrootPlaatje.addEventListener("click", () => {
 
-//maakt var aan voor het kleine plaatje en stopt de pictures d'r in
-  //let klein = document.getElementsByClassName("ClassOfSmallPictures");
+// // maakt var aan voor het kleine plaatje en stopt de pictures d'r in
+//   let klein = document.getElementsByClassName("tiniestImages");
 
-  //GrootPlaatje.src = klein.src;
-//})
+//   GrootPlaatje.src = klein.src;
+// })
 
 

@@ -35,9 +35,6 @@ Where everything is sorted into a grid just like the .container class
     background-color: white;
     padding: 5%;
     border-radius: 15px;
-
-    width: 1fr;
-
   }
 
   .product-item img{

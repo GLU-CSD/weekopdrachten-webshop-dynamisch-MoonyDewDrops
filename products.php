@@ -10,11 +10,14 @@ $products = [
 						"sale" => false,
             "duration" => 3.08,
             "age" => 1,
-            "photo" => "https://i.scdn.co/image/ab67616d0000b27337f7b15671c5778cf0a24408"
+            "photo" => "https://i.scdn.co/image/ab67616d0000b27337f7b15671c5778cf0a24408",
+            "photo2" => "https://www.sanrio.com/cdn/shop/files/840298909971-1_800x.png?v=1708976679",
+            "photo3" => "https://www.sanrio.com/cdn/shop/files/0018632_my-melody-sculpted-ceramic-mug_800x.jpg?v=1690573733",
+            "description" => "a"
             // [
             //     "photo1" => //,
             //     // "photo2" => "",
-            //     // "photo3" => ""
+            //     // "photo3" => ""d
             // ]
         ],
         [
@@ -25,7 +28,10 @@ $products = [
 						"sale" => false,
             "duration" => 3.57,
             "age" => 2,
-            "photo" => "https://i.scdn.co/image/ab67616d0000b2735eeb8bef2852830aca370ecc"
+            "photo" => "https://i.scdn.co/image/ab67616d0000b2735eeb8bef2852830aca370ecc",
+            "photo2" => "",
+            "photo3" => "",
+            "description" => "b"
         ],
 	      [
             "id" => "d1167f65-0fe7-4166-a452-4849953271f0",
@@ -35,7 +41,10 @@ $products = [
 						"sale" => false,
             "duration" => 5.03,
             "age" => 3,
-            "photo" => "https://i.scdn.co/image/ab67616d0000b273edc69ca99ecaa858859916d6" 
+            "photo" => "https://i.scdn.co/image/ab67616d0000b273edc69ca99ecaa858859916d6",
+            "photo2" => "",
+            "photo3" => "",
+            "description" => "c"
 
         ],
         [
@@ -46,7 +55,10 @@ $products = [
             "sale" => false,
             "duration" => 3.38,
             "age" => 4,
-            "photo" => "https://i.scdn.co/image/ab67616d0000b27393e217d47ab46afb24e2add4"
+            "photo" => "https://i.scdn.co/image/ab67616d0000b27393e217d47ab46afb24e2add4",
+            "photo2" => "",
+            "photo3" => "",
+            "description" => "d"
         ],
         [
             "id" => "425e6bec-8d30-491b-9e0a-92d3563a6a63",
@@ -56,7 +68,10 @@ $products = [
             "sale" => false,
             "duration" => 4.14,
             "age" => 5,
-            "photo" => "https://i.scdn.co/image/ab67616d0000b27361c527fbc1d9bd0b09ef7da1"
+            "photo" => "https://i.scdn.co/image/ab67616d0000b27361c527fbc1d9bd0b09ef7da1",
+            "photo2" => "",
+            "photo3" => "",
+            "description" => "e"
         ],
         [
             "id" => "a2c4dea8-d91f-4fde-8d13-76421fac6792",
@@ -66,7 +81,10 @@ $products = [
             "sale" => false,
             "duration" => 2.52,
             "age" => 6,
-            "photo" => "https://i.scdn.co/image/ab67616d0000b273ffbee89074df18aeb7b61c58"
+            "photo" => "https://i.scdn.co/image/ab67616d0000b273ffbee89074df18aeb7b61c58",
+            "photo2" => "",
+            "photo3" => "",
+            "description" => "f"
             
         ],
         [
@@ -77,7 +95,10 @@ $products = [
           "sale" => false,
           "duration" => 2.48,
           "age" => 7,
-          "photo" => "https://i.scdn.co/image/ab67616d0000b27390929a488d253121a9e8a2d6"
+          "photo" => "https://i.scdn.co/image/ab67616d0000b27390929a488d253121a9e8a2d6",
+          "photo2" => "",
+          "photo3" => "",
+          "description" => "g"
           
         ],
         [
@@ -89,7 +110,10 @@ $products = [
             "sale" => 12.99,
             "duration" => 3.10,
             "age" => 8,
-            "photo" => "https://i.scdn.co/image/ab67616d0000b2736a487b8ee6230dceba4725f2"
+            "photo" => "https://i.scdn.co/image/ab67616d0000b2736a487b8ee6230dceba4725f2",
+            "photo2" => "",
+            "photo3" => "",
+            "description" => "h"
         ],
         [
           "id" => "16d815a0-6fcf-4f96-8b3e-d78eedef7286",
@@ -100,7 +124,10 @@ $products = [
           "sale" => 9.99,
           "duration" => 3.17,
           "age" => 9,
-          "photo" => "https://i.scdn.co/image/ab67616d0000b27344c914f478ca06b3fe8076a2"
+          "photo" => "https://i.scdn.co/image/ab67616d0000b27344c914f478ca06b3fe8076a2",
+          "photo2" => "",
+          "photo3" => "",
+          "description" => "i"
         ],
         [
           "id" => "e2b9efa7-64b4-4958-89d3-25b3524bc4de",
@@ -111,7 +138,10 @@ $products = [
           "sale" => false,
           "duration" => 3.25,
           "age" => 10,
-          "photo" => "https://i.scdn.co/image/ab67616d0000b273bce6b3d91965fe4b8fa47ed6"
+          "photo" => "https://i.scdn.co/image/ab67616d0000b273bce6b3d91965fe4b8fa47ed6",
+          "photo2" => "",
+          "photo3" => "",
+          "description" => "j"
       ],
       [
           "id" => "355631ce-9ee6-45a5-b709-ac7c4d3773c3",
@@ -122,7 +152,10 @@ $products = [
           "sale" => false,
           "duration" => 3.05,
           "age" => 11,
-          "photo" => "https://i.scdn.co/image/ab67616d0000b273a835e1228c922fdcb8fc9feb"
+          "photo" => "https://i.scdn.co/image/ab67616d0000b273a835e1228c922fdcb8fc9feb",
+          "photo2" => "",
+          "photo3" => "",
+          "description" => "k"
       ],
       [
           "id" => "968ef7e0-2a3a-433c-ace7-8cf6bc6294ea",
@@ -133,7 +166,10 @@ $products = [
           "sale" => false,
           "duration" => 3.57,
           "age" => 12,
-          "photo" => "https://i.scdn.co/image/ab67616d0000b2731ee6236a101898abb7a2e161"
+          "photo" => "https://i.scdn.co/image/ab67616d0000b2731ee6236a101898abb7a2e161",
+          "photo2" => "",
+          "photo3" => "",
+          "description" => "l"
       ],
       [
         "id" => "4e0d07a3-fb98-49dc-aef4-c14f038cbb21",
@@ -143,7 +179,10 @@ $products = [
         "sale" => false,
         "duration" => 3.44,
         "age" => 13,
-        "photo" => "https://i.scdn.co/image/ab67616d0000b273eb11675bbb9873e9d96ff650"
+        "photo" => "https://i.scdn.co/image/ab67616d0000b273eb11675bbb9873e9d96ff650",
+        "photo2" => "",
+        "photo3" => "",
+        "description" => "m"
       ],
       [
         "id" => "9038e2da-0331-4c0e-8ca1-2db7e7756af2",
@@ -153,7 +192,10 @@ $products = [
         "sale" => false,
         "duration" => 4.48,
         "age" => 14,
-        "photo" => "https://i.scdn.co/image/ab67616d0000b27389b5314333251f420d1c09a0"
+        "photo" => "https://i.scdn.co/image/ab67616d0000b27389b5314333251f420d1c09a0",
+        "photo2" => "",
+        "photo3" => "",
+        "description" => "n"
       ],
       [
         "id" => "b65b3234-6981-4c59-bf0f-43239474f0f9",
@@ -163,7 +205,10 @@ $products = [
         "sale" => false,
         "duration" => 3.13,
         "age" => 15,
-        "photo" => "https://i.scdn.co/image/ab67616d0000b2731fc2f5ab28c832a1094df62b"
+        "photo" => "https://i.scdn.co/image/ab67616d0000b2731fc2f5ab28c832a1094df62b",
+        "photo2" => "",
+        "photo3" => "",
+        "description" => "o"
       ],
       [
         "id" => "9f153ce0-9776-4884-9330-568c4680e21f",
@@ -173,7 +218,10 @@ $products = [
         "sale" => false,
         "duration" => 3.14,
         "age" => 16,
-        "photo" => "https://i.scdn.co/image/ab67616d0000b2731f13ee83ecc3a4bc08dce62b"
+        "photo" => "https://i.scdn.co/image/ab67616d0000b2731f13ee83ecc3a4bc08dce62b",
+        "photo2" => "",
+        "photo3" => "",
+        "description" => "p"
       ],
       [
         "id" => "492dc956-36b1-47c8-9248-fce79d79eccf",
@@ -183,7 +231,10 @@ $products = [
         "sale" => false,
         "duration" => 5.09,
         "age" => 17,
-        "photo" => "https://i.scdn.co/image/ab67616d0000b2734bd80a0cd131f21debd0d07d"
+        "photo" => "https://i.scdn.co/image/ab67616d0000b2734bd80a0cd131f21debd0d07d",
+        "photo2" => "",
+        "photo3" => "",
+        "description" => "q"
       ],
       [
         "id" => "257cc213-051a-44e4-8fb0-06639b8f84ac",
@@ -193,7 +244,10 @@ $products = [
           "sale" => false,
           "duration" => 3.46,
           "age" => 18,
-          "photo" => "https://i.scdn.co/image/ab67616d0000b27363bbb4ed7019cd5d3c515d08"
+          "photo" => "https://i.scdn.co/image/ab67616d0000b27363bbb4ed7019cd5d3c515d08",
+          "photo2" => "",
+          "photo3" => "",
+          "description" => "r"
       ],
       [
         "id" => "79da8bfe-a88b-43f4-8647-9a15be961c4a",
@@ -203,7 +257,10 @@ $products = [
         "sale" => false,
         "duration" => 5.19,
         "age" => 19,
-        "photo" => "https://i.scdn.co/image/ab67616d0000b273d887b8e4146632d47ab0c6ee"
+        "photo" => "https://i.scdn.co/image/ab67616d0000b273d887b8e4146632d47ab0c6ee",
+        "photo2" => "",
+        "photo3" => "",
+        "description" => "s"
       ],
       [
         "id" => "8124c7af-7cbf-45a4-9062-832e2005a0fa",
@@ -213,7 +270,10 @@ $products = [
         "sale" => false,
         "duration" => 3.54,
         "age" => 20,
-        "photo" => "https://i.scdn.co/image/ab67616d0000b273b46c6f2180b6a41487fed6d0"
+        "photo" => "https://i.scdn.co/image/ab67616d0000b273b46c6f2180b6a41487fed6d0",
+        "photo2" => "",
+        "photo3" => "",
+        "description" => "t"
       ],
       [
         "id" => "9ef0dffd-6c82-4647-8ba1-6876911a817d",
@@ -223,7 +283,10 @@ $products = [
           "sale" => false,
           "duration" => 4.30,
           "age" => 21,
-          "photo" => "https://i.scdn.co/image/ab67616d0000b2734ae9002283502758b498d615"
+          "photo" => "https://i.scdn.co/image/ab67616d0000b2734ae9002283502758b498d615",
+          "photo2" => "",
+          "photo3" => "",
+          "description" => "u"
       ],
 
 
