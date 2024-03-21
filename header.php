@@ -1,10 +1,3 @@
-
-
-<?php
-
-?>
-
-
 <!--Where the logo should be placed-->
 <div class="logo">
   <div>

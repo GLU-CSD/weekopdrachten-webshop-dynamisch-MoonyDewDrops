@@ -8,7 +8,7 @@ include 'products.php';
 <div class="Filter">
 
 <div id="itemsFound">
-  <p>Total items found: 21</p> <!--Here put variable of the amount of items, do later when u got javascript but for now a placeholder-->
+  <p>Total items found: <?php echo count($products); ?></p> <!--Here put variable of the amount of items, do later when u got javascript but for now a placeholder-->
 </div>
 
 <div id="sortBy">

@@ -24,6 +24,7 @@
     <link rel="shortcut icon" href="assets/Images/favicon.ico">
   
     <meta name="theme-color" content="#fafafa">
+    <link rel="shortcut icon" href="assets/Images/favicon.ico">
 
     <!--Thing that links the javascript to this document-->
     <script defer src="assets/js/app.js"></script>

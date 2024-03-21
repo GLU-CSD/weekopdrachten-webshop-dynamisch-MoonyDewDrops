@@ -14,6 +14,9 @@
     <!--Thing that links the javascript to this document-->
     <script defer src="assets/js/app.js"></script>
 
+    <link rel="shortcut icon" href="assets/Images/favicon.ico">
+    <meta name="theme-color" content="#fafafa">
+
   </head>
 <body>
     
@@ -47,6 +50,8 @@
       
       // echo $id;
       ?>
+
+
     
     </div>
     
