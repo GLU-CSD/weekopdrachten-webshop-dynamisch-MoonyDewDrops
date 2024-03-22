@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 //the function to send it to the site
 function link() {
-  //window.location.href = "https://u230062.gluwebsite.nl/web/WebshopJulia/";
   window.location.href = "index.php";
 
 }
 
+//other things to send it to site
 function goToLink() {
   window.location.href = "form.php";
 }
@@ -36,25 +36,10 @@ function productPage() {
   window.location.href = "productPage.php";
 }
 
+//to clear cart/storage for testing
 function clearCart(){
   localStorage.clear();
 }
-
-// //maakt een var voor het grote plaatje aan en linkt em naar de class
-// let GrootPlaatje = document.getElementById("bigImage");
-
-// // waarschijnlijk veranderen naar n onclick="changePicture" ding want dit is te ingewikkelt voor zo iets simpels voor mijn brein
-// GrootPlaatje.addEventListener("click", () => {}
-
-//function changePicture(){
-
-// // maakt var aan voor het kleine plaatje en stopt de pictures d'r in
-//   let klein = document.getElementsByClassName("tiniestImages");
-
-//   GrootPlaatje.src = klein.src;
-// })
-
-// localStorage.clear();
 
 
 
