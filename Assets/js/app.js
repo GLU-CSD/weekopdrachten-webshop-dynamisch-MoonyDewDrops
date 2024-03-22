@@ -30,13 +30,19 @@ function productPage() {
   window.location.href = "productPage.php";
 }
 
+function cartButton(){
+  window.location.href = "cart.php";
+}
+
 
 
 // //maakt een var voor het grote plaatje aan en linkt em naar de class
 // let GrootPlaatje = document.getElementById("bigImage");
 
 // // waarschijnlijk veranderen naar n onclick="changePicture" ding want dit is te ingewikkelt voor zo iets simpels voor mijn brein
-// GrootPlaatje.addEventListener("click", () => {
+// GrootPlaatje.addEventListener("click", () => {}
+
+//function changePicture(){
 
 // // maakt var aan voor het kleine plaatje en stopt de pictures d'r in
 //   let klein = document.getElementsByClassName("tiniestImages");

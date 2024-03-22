@@ -2,17 +2,19 @@ body{
     background-color: #5a7098;
     font-family: sans-serif;
 }
+  
 
 /*grid layout for everything*/
 .container {  
     display: grid;
-    grid-template-columns: 0.5fr 1fr 50fr 1fr 50fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.15fr 0.2fr 2fr 1fr;
+    gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "logo search search search addons"
       "additional-info additional-info additional-info additional-info additional-info"
-      "product product product product product"
+      "cart cart cart cart cart"
       "disclaimer disclaimer disclaimer disclaimer disclaimer";
       width: 80%;
       margin-left: 10%;
@@ -22,60 +24,6 @@ body{
       height: auto;
       background-color: white;
 }
-
-  #overviewProduct{
-   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 0.25fr;
-  gap: 5% 5%;
-  grid-auto-flow: row;
-  grid-template-areas: 
-    "bigImage overall"
-    "bigImage overall"
-    "bigImage overall"
-    "tinyImages description"
-  ; 
-  grid-area: overviewProduct; 
-  
-  height: 82.5%;
-  width: 90%;
-
-  /* style */
-  border: 2px solid #6495ED;
-  border-radius: 15px;
-  background-color: white;
-  padding: 5%;
-}  
-
-#tinyImages{
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  margin-left: 10%;
-}
-
-#tinyImages img{
-  height: 80%; 
-  width: 25%;
-}
-
-
-#bigImage{
-  height: 70%;
-  width: auto;
-}
-.product{
-  padding: 5%;
-  height: 100%;
-  width: 100%;
-  /* style */
-  border: 2px solid #ed6464;
-  border-radius: 15px;
-
-  
-}
-
-
 
 @media only screen and (max-width: 1150px){
     .container {  
@@ -87,7 +35,7 @@ body{
       grid-template-areas:
         "logo logo search search addons"
         "additional-info additional-info additional-info additional-info additional-info"
-        "product product product product product"
+        "cart cart cart cart cart"
         "disclaimer disclaimer disclaimer disclaimer disclaimer";
       width: 80%;
       margin-left: 10%;
@@ -97,21 +45,6 @@ body{
       height: auto;
       background-color: white;
   }
-
-  #overviewProduct{
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
-   grid-template-areas: 
-     "bigImage overall"
-     "tinyImages description"
-   ; 
-
- }  
-
- #tinyImages img{
-  margin-top: 10%;
-  height: 25%;
- }
 }
   
 /*For responsiveness. This changes the grid layout so it's better displayed and doesn't bug out*/
@@ -122,7 +55,7 @@ body{
     grid-template-areas:
       "logo search addons"
       "additional-info additional-info additional-info"
-      "product product product"
+      "cart cart cart"
       "disclaimer disclaimer disclaimer";
   }
 }
@@ -137,7 +70,7 @@ body{
     grid-template-areas:
       "logo search addons"
       "additional-info additional-info additional-info"
-      "product product product"
+      "cart cart cart"
       "disclaimer disclaimer disclaimer";
   }
   

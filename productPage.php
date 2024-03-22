@@ -17,101 +17,54 @@
     <link rel="shortcut icon" href="assets/Images/favicon.ico">
     <meta name="theme-color" content="#fafafa">
 
+    <!--Thing that links the javascript to this document-->
+    <script defer src="assets/js/ImageSelector.js"></script>
+
   </head>
 <body>
     
 
 <div class="container">
+    <!-- Header -->
+    <?php include 'header.php'; ?>
 
-    <?php
-    include 'header.php';
-    ?>
-
-    <!--Here goes product thingy-->
+    <!-- Product -->
     <div class="product">
-      <?php
-
-        include 'products.php';
-      
-          if(!empty($_GET['id'])){
-            $id = $_GET['id'];
+        <?php
+            include 'products.php';
           
-            foreach($products as $product){
+            if(!empty($_GET['id'])){
+                $id = $_GET['id'];
+              
+                foreach($products as $product){
+                    if($product['id'] == $id){
+                        echo '<div id="overviewProduct">';
+                            echo '<img src="'.$product['photo'].'" id="bigImage">';
+                            echo '<div id="overall">';
+                                echo $product['title'].'<br> <br>';
+                                echo '€'.$product['price'].'<br> <br>';
+                                echo '<button id="description" onclick="cartButton()">Add to cart?</button> <br> <br>';
+                                echo $product['description'];
+                            echo '</div>';
 
-              if($product['id'] == $id){
-                echo '<div id="overviewProduct">';
-                  echo '<img src="'.$product['photo'].'" style="width:100%; height: auto;" id="bigImage">';
-                  echo '<div id="overall">'.$product['title'].'<br> <br>';
-                  echo '€'.$product['price'].'<br> <br>';
-                  echo '<button id="description" onclick="goToLink()">Add to cart?</button> <br> <br>';
-                  echo $product['description'].'</div>';
-
-                  echo '<div id="tinyImages">';
-                    echo '<img src="'.$product['photo'].'" class="tiniestImages" onclick="changePicture1()">';
-                    echo '<img src="'.$product['photo2'].'" class="tiniestImages" onclick="changePicture2()">';
-                    echo '<img src="'.$product['photo3'].'" class="tiniestImages" onclick="changePicture3()">';
-                  echo '</div>';
-                echo '</div>';
-              }
-
+                            echo '<div id="tinyImages">';
+                                echo '<img src="'.$product['photo'].'" class="tiniestImages">';
+                                echo '<img src="'.$product['photo2'].'" class="tiniestImages">';
+                                echo '<img src="'.$product['photo3'].'" class="tiniestImages">';
+                            echo '</div>';
+                        echo '</div>';
+                    }
+                }
+            } else {
+                echo 'Product not found';
             }
-
-          } else {
-            echo 'product not found';
-          }
-          ?>
+        ?>
     </div>
-    
-    <?php
-      include 'footer.php';
-    ?>
 
+    <!-- Footer -->
+    <?php include 'footer.php'; ?>
 </div>
 
-<script>
-
-
-
-//maakt een var voor het grote plaatje aan en linkt em naar de class
-let GrootPlaatje = document.getElementById("bigImage");
-let klein = document.getElementsByClassName("tiniestImages");
-
-
-// waarschijnlijk veranderen naar n onclick="changePicture" ding want dit is te ingewikkelt voor zo iets simpels voor mijn brein
-function changePicture1(){
-
-// maakt var aan voor het kleine plaatje en stopt de pictures d'r in
-  // let klein = document.getElementsByClassName("tiniestImages");
-
-  console.log(klein[0].src);
-  // console.log(klein.src, GrootPlaatje.src);
-
-  // GrootPlaatje.src = klein;
-}
-
-function changePicture2(){
-
-// maakt var aan voor het kleine plaatje en stopt de pictures d'r in
-  // let klein = document.getElementsByClassName("tiniestImages");
-
-  console.log(klein[1].src);
-  // console.log(klein.src, GrootPlaatje.src);
-
-  // GrootPlaatje.src = klein;
-}
-
-function changePicture3(){
-
-// maakt var aan voor het kleine plaatje en stopt de pictures d'r in
-  // let klein = document.getElementsByClassName("tiniestImages");
-
-  console.log(klein[2].src);
-  // console.log(klein.src, GrootPlaatje.src);
-
-  // GrootPlaatje.src = klein.src;
-}
-
-</script>
     
 </body>
 </html>
