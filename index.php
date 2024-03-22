@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+// function setCartedProduct(){
+//   $_SESSION["productID"] = $product['id'];
+// }
 ?>
 <!doctype html>
 <html class="no-js" lang="en">

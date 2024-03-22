@@ -43,7 +43,7 @@
                             echo '<div id="overall">';
                                 echo $product['title'].'<br> <br>';
                                 echo '€'.$product['price'].'<br> <br>';
-                                echo '<button id="description" onclick="cartButton()">Add to cart?</button> <br> <br>';
+                                echo '<button id="description" onclick="addProduct(); location.href=\'cart.php?id=' . $product['id'] . '\'">Add to cart?</button><br><br>';
                                 echo $product['description'];
                             echo '</div>';
 

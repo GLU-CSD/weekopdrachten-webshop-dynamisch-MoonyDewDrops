@@ -6,7 +6,7 @@ body{
 /*grid layout for everything*/
 .container {  
     display: grid;
-    grid-template-columns: 0.5fr 1fr 50fr 1fr 50fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.15fr 0.2fr 2fr 1fr;
     grid-auto-flow: row;
     grid-template-areas:
@@ -35,9 +35,8 @@ body{
     "bigImage overall"
     "tinyImages description"
   ; 
-  grid-area: overviewProduct; 
   
-  height: 82.5%;
+  height: 80%;
   width: 90%;
 
   /* style */
@@ -45,6 +44,7 @@ body{
   border-radius: 15px;
   background-color: white;
   padding: 5%;
+  margin-top: 2.5%;
 }  
 
 #tinyImages{
@@ -61,16 +61,20 @@ body{
 
 
 #bigImage{
-  height: 70%;
-  width: auto;
+  height: 90%;
+  width: 100%;
 }
-.product{
+ .product{
   padding: 5%;
   height: 100%;
-  width: 100%;
-  /* style */
-  border: 2px solid #ed6464;
-  border-radius: 15px;
+  width: 885%;
+
+
+  /* border: 2px solid #ed6464;
+  border-radius: 15px; */
+  display: grid;
+  grid-template-areas:
+  "overviewProduct";
 
   
 }
@@ -81,11 +85,11 @@ body{
     .container {  
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 0.27fr 0.125fr 2fr 1fr;
+      grid-template-rows: 0.07fr 0.13fr 0.3fr 0.2fr;
       gap: 0px 0px;
       grid-auto-flow: row;
       grid-template-areas:
-        "logo logo search search addons"
+        "logo search search addons addons"
         "additional-info additional-info additional-info additional-info additional-info"
         "product product product product product"
         "disclaimer disclaimer disclaimer disclaimer disclaimer";
@@ -99,14 +103,22 @@ body{
   }
 
   #overviewProduct{
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
    grid-template-areas: 
-     "bigImage overall"
-     "tinyImages description"
+     "bigImage"
+     "tinyImages" 
+     "tinyImages"
    ; 
+   width: 45%;
+   margin-top: 0%;
+   margin-bottom: 2.5%;
 
  }  
+
+ #bigImage{
+  height: 80%;
+ }
 
  #tinyImages img{
   margin-top: 10%;

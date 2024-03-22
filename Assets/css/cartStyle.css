@@ -3,7 +3,6 @@ body{
     font-family: sans-serif;
 }
   
-
 /*grid layout for everything*/
 .container {  
     display: grid;
@@ -24,6 +23,28 @@ body{
       height: auto;
       background-color: white;
 }
+
+#cart{
+    width: 265%;
+    height: auto;
+}
+
+.topRow{
+    display: flex;
+    align-items: center;
+    
+    text-align: center;
+    width: 100%;
+    gap: 5%;
+}
+
+.btwClass{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-left: -3%;
+}
+
 
 @media only screen and (max-width: 1150px){
     .container {  

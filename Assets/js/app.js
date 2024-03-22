@@ -1,3 +1,4 @@
+
 //creates counter for cart
 var ItemCounter = 0;
 
@@ -8,7 +9,17 @@ const counterDiv = document.getElementById("ItemCounter");
 function addProduct(){
   ItemCounter++;
   counterDiv.innerHTML = ItemCounter;
+  localStorage.setItem('amountProduce', ItemCounter);
 }
+
+// Retrieve the saved value from localStorage when the page loads
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Check if the stored value exists
+  if(localStorage.getItem('amountProduce')) {
+    ItemCounter = parseInt(localStorage.getItem('amountProduce'), 10);
+    counterDiv.innerHTML = ItemCounter;
+  }
+});
 
 //the function to send it to the site
 function link() {
@@ -16,11 +27,6 @@ function link() {
   window.location.href = "index.php";
 
 }
-
-function test(){
-  alert('aloha');
-}
-
 
 function goToLink() {
   window.location.href = "form.php";
@@ -30,11 +36,9 @@ function productPage() {
   window.location.href = "productPage.php";
 }
 
-function cartButton(){
-  window.location.href = "cart.php";
+function clearCart(){
+  localStorage.clear();
 }
-
-
 
 // //maakt een var voor het grote plaatje aan en linkt em naar de class
 // let GrootPlaatje = document.getElementById("bigImage");
@@ -49,5 +53,9 @@ function cartButton(){
 
 //   GrootPlaatje.src = klein.src;
 // })
+
+// localStorage.clear();
+
+
 
 
