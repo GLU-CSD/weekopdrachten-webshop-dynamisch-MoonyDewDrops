@@ -45,8 +45,8 @@
                             <img src="<?=$product['photo']?>" id="bigImage">
                             <div id="overall">
                                 <?=$product['title']?> <br> <br>
-                                €<?=$product['price']?> <br> <br>                 <!--On click w/ href dont work. Ask -->
-                                <button id="description" onclick="addProduct();" onclick="location.href=\'cart.php?id=<?=$product['id']?>\'">
+                                €<?=$product['price']?> <br> <br>
+                               <?php echo '<button id="description" onclick="addProduct(); location.href=\'cart.php?id=' . $product['id'] . '\'">' ?>
                                   Add to cart?
                                 </button>
                                 <br><br>

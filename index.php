@@ -96,11 +96,10 @@ session_start();
 
 <!-- Thing i wanna ask: 
 
-1. Href not working in onclick                            (in productPage.php) (belangrijk)
-2. pageProduct responsiveness                             (in pageProduct.css) (belangrijk)
-3. Cart math                                              (in cart.php)
-4. Sessions n how i need to incorporate them into my code (in app.js, productPage.php)
-5. forms and their everything                             (in filter.php, form.php)
+1. pageProduct responsiveness                             (in pageProduct.css) (belangrijk)
+2. Cart math                                              (in cart.php)
+3. Sessions n how i need to incorporate them into my code (in app.js, productPage.php)
+4. forms and their everything                             (in filter.php, form.php)
 
 -->
 
