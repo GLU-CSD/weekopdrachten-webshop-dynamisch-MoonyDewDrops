@@ -1,4 +1,5 @@
-
+<!--Thing that links the javascript to this document-->
+<script defer src="assets/js/slider.js"></script>
 
 <?php
 include 'products.php';
@@ -8,7 +9,7 @@ include 'products.php';
 <div class="Filter">
 
 <div id="itemsFound">
-  <p>Total items found: <?php echo count($products); ?></p> <!--Here put variable of the amount of items, do later when u got javascript but for now a placeholder-->
+  <p>Total items found: <?=count($products);?></p> <!--Here put variable of the amount of items, do later when u got javascript but for now a placeholder-->
 </div>
 
 <div id="sortBy">
@@ -65,17 +66,3 @@ include 'products.php';
 </div>
 
 </div>
-
-<script>
-//This creates a variable for the slider, and the value it changes.  
-var slider = document.getElementById("myRange");
-var output = document.getElementById("prijs");
-
-//What the text that displays the price displays. This sets it to the slider value 
-output.innerHTML = slider.value;
-
-//when it changes, the value (so also the text) changes
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-</script>

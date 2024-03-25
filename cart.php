@@ -26,56 +26,46 @@
   <div id="cart">
     <?php
       include 'products.php';
-
-
-        
         $id = $_GET['id'];
-
-
-
         foreach($products as $product){
             if($product['id'] == $id){
                 $price = $product['price'];
+                ?>
 
-                echo '<div class="topRow">';
+                <div class="topRow">
 
-                  echo '<div id="name">'.$product['title'].'</div>';
+                  <div id="name"><?=$product['title']?></div>
 
-                  echo '<div id="productPrice">productprijs</div>';
+                  <div id="productPrice">productprijs</div>
 
-                  echo '<div id="cartPrice">'.$price.'</div>';
+                  <div id="cartPrice"><?=$price?></div>
 
-                  echo '<div id="amountInCart">Javascript ItemCounter variabel</div>';
+                  <div id="amountInCart">Javascript ItemCounter variabel</div>
 
-                  echo '<div id="totalPrice">Totaal prijs</div>';
+                  <div id="totalPrice">Totaal prijs</div>
 
-                echo '</div>';
+                </div>
 
-                echo '<br> <br>';
+                <br> <br>
                 
-                //berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan)
-                echo '<div class="btwClass">';
-                  echo 'btw';
+                <!-- berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan) -->
+                <div class="btwClass">
+                  btw
 
-                echo '</div>';
+                </div>
+                <br> <br>
 
-                echo '<br> <br>';
+                <!-- bij deze dan gwn de variabel van de btw + degene van de totale prijs -->
+                <div id="priceWbtw" style="margin-left:90%;">
 
-                //bij deze dan gwn de variabel van de btw + degene van de totale prijs
-                echo '<div id="priceWbtw" style="margin-left:90%;">';
+                  prijs met btw
 
-                  echo 'prijs met btw';
-
-                echo '</div>';
+                </div>
+                <?php
             }
 
                      
       }
-
-      
-
-
-
     ?>
     
   </div>

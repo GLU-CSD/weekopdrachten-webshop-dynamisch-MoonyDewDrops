@@ -44,13 +44,9 @@ session_start();
 
     <?php
     include_once 'header.php';
-    ?>
 
-    <?php
-      include 'filter.php';
-    ?>
+    include 'filter.php';
 
-    <?php
     include 'products.php';
     ?>
 
@@ -62,15 +58,21 @@ session_start();
 
     <?php
       foreach ($products as $product) {
-        echo '<div id="product" class="product-item">
+
+        ?>
+        <a href="productPage.php?id=<?=$product['id']?>" style="text-decoration:none;color:black;">
+        
+          <div id="product" class="product-item" >
       
-        <img src="'.$product['photo'].'" alt="'.$product['title'].'" 
-        style="width: 100%; height: auto">
-        <a href="productPage.php?id='.$product['id'].'">'.$product['title'].'</a>
-        <p>€'.$product['price'].'</p>
-        <br>
-        <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button>
-        </div>';
+          <img src="<?=$product['photo']?>" alt="<?=$product['title']?>" 
+          style="width: 100%; height: auto">
+          <?=$product['title']?>
+          <p>€<?=$product['price']?></p>
+
+          <!-- <button type="button" class="productButtons" onclick="addProduct()">Add to cart</button> -->
+          </div>
+        </a>
+        <?php
       }
     ?>
 
@@ -91,3 +93,12 @@ session_start();
 </body>
 
 </html>
+
+<!-- Thing i wanna ask: 
+
+1. Href not working in onclick in productPage.php 
+2. Cart math
+3. forms and their everything
+ 
+ -->
+

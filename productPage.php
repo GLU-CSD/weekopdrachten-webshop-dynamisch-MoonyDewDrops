@@ -38,21 +38,26 @@
               
                 foreach($products as $product){
                     if($product['id'] == $id){
-                        echo '<div id="overviewProduct">';
-                            echo '<img src="'.$product['photo'].'" id="bigImage">';
-                            echo '<div id="overall">';
-                                echo $product['title'].'<br> <br>';
-                                echo '€'.$product['price'].'<br> <br>';
-                                echo '<button id="description" onclick="addProduct(); location.href=\'cart.php?id=' . $product['id'] . '\'">Add to cart?</button><br><br>';
-                                echo $product['description'];
-                            echo '</div>';
+                        ?>
+                          <div id="overviewProduct">
+                            <img src="<?=$product['photo']?>" id="bigImage">
+                            <div id="overall">
+                                <?=$product['title']?> <br> <br>
+                                €<?=$product['price']?> <br> <br>                 <!--On click w/ href dont work. Ask -->
+                                <button id="description" onclick="addProduct();" onclick="location.href=\'cart.php?id=<?=$product['id']?>\'">
+                                  Add to cart?
+                                </button>
+                                <br><br>
+                                <?=$product['description']?>
+                            </div>
 
-                            echo '<div id="tinyImages">';
-                                echo '<img src="'.$product['photo'].'" class="tiniestImages">';
-                                echo '<img src="'.$product['photo2'].'" class="tiniestImages">';
-                                echo '<img src="'.$product['photo3'].'" class="tiniestImages">';
-                            echo '</div>';
-                        echo '</div>';
+                            <div id="tinyImages">
+                                <img src="<?=$product['photo']?>" class="tiniestImages">
+                                <img src="<?=$product['photo2']?>" class="tiniestImages">
+                                <img src="<?=$product['photo3']?>" class="tiniestImages">
+                            </div>
+                        </div>
+                        <?php
                     }
                 }
             } else {
