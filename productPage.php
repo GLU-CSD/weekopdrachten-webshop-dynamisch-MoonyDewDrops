@@ -37,9 +37,11 @@
           
             if(!empty($_GET['id'])){
                 $id = $_GET['id'];
-              
+                $productExist = false;
                 foreach($products as $product){
+                    
                     if($product['id'] == $id){
+                        $productExist = true;
                         ?>
                         <div id="overviewProduct">
                             <img src="<?=$product['photo']?>" id="bigImage">
@@ -62,7 +64,7 @@
                         <?php
                     }
                 }
-            } else {
+            } if(!$productExist) {
                 echo 'Product not found';
             }
         ?>

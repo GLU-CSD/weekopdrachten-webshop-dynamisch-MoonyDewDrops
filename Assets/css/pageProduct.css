@@ -46,8 +46,7 @@ body{
 }
  .product{
   padding: 5%;
-  height: 100%;
-  width: 885%;
+  height: auto;
   /*885% if you want full coverage (well how i want full coverage*/
 
 
@@ -56,13 +55,13 @@ body{
   display: grid;
   grid-template-areas:
   "overviewProduct";
-
+  grid-area: 3 / 1 / 4 / 6;
   
 }
 
 
 
-@media only screen and (max-width: 1150px){
+@media all and (max-width: 1150px){
 
   #overviewProduct{
    grid-template-columns: 1fr;
@@ -86,6 +85,8 @@ body{
   margin-top: 10%;
   height: 25%;
  }
+
+ 
 
 }
   
