@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product page</title>
 
-    <!--<link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/pageProductLayout.css">
+
     <link rel="stylesheet" href="assets/css/0TopBalk.css">
     <link rel="stylesheet" href="assets/css/1navigationBalk.css">
-    <link rel="stylesheet" href="assets/css/pageProduct.css">
+    <link rel="stylesheet" href="assets/css/pageProduct.css">    
     <link rel="stylesheet" href="assets/css/footer.css">
+
 
     <!--Thing that links the javascript to this document-->
     <script defer src="assets/js/app.js"></script>
@@ -39,7 +41,7 @@
                 foreach($products as $product){
                     if($product['id'] == $id){
                         ?>
-                          <div id="overviewProduct">
+                        <div id="overviewProduct">
                             <img src="<?=$product['photo']?>" id="bigImage">
                             <div id="overall">
                                 <?=$product['title']?> <br> <br>

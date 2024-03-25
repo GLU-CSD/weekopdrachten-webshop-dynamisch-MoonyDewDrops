@@ -1,3 +1,4 @@
+// $_SESSION["ProductInCart"] = ItemCounter;
 
 //creates counter for cart
 var ItemCounter = 0;
@@ -40,7 +41,5 @@ function productPage() {
 function clearCart(){
   localStorage.clear();
 }
-
-
 
 
