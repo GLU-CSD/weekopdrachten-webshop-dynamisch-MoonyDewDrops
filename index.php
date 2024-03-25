@@ -58,7 +58,6 @@ session_start();
 
     <?php
       foreach ($products as $product) {
-
         ?>
         <a href="productPage.php?id=<?=$product['id']?>" style="text-decoration:none;color:black;">
         
@@ -96,10 +95,11 @@ session_start();
 
 <!-- Thing i wanna ask: 
 
-1. pageProduct responsiveness                             (in pageProduct.css) (belangrijk)
-2. Cart math                                              (in cart.php)
-3. Sessions n how i need to incorporate them into my code (in app.js, productPage.php)
-4. forms and their everything                             (in filter.php, form.php)
+1. pageProduct responsiveness                             (in pageProduct.css) (belangrijk) (Mostly fixed)
+2. Cart math                                              (in cart.php) (After Sessions work)
+3. Sessions n how i need to incorporate them into my code (in app.js, productPage.php) (Is getting handled tmrw, Thomas will explain Sessions n stuff)
+4. forms and their everything                             (in filter.php, form.php) (Tmrw or Wednesday so i have sum to work on in vacation (maybe idk 
+if i'll work during the vacation yet))
 
 -->
 

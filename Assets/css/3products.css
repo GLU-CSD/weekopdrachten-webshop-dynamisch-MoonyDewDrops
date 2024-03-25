@@ -46,6 +46,7 @@ Where everything is sorted into a grid just like the .container class
   .product-item:hover{
     background-color: rgb(235, 235, 235);
     color: #13293D;  
+    cursor: pointer;
   }
 
   
