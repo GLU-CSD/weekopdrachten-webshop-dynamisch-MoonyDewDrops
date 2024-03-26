@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -67,6 +70,20 @@
             } if(!$productExist) {
                 echo 'Product not found';
             }
+
+            // //creates counter for cart
+            // ItemCounter = 0;
+
+            // //gets the id of the button
+            // const counterDiv = document.getElementById("ItemCounter");
+
+            //  //adds the numbers like a pro
+            // function addProduct(){
+            //   ItemCounter++;
+            //   counterDiv.innerHTML = ItemCounter;
+            //   localStorage.setItem('amountProduce', ItemCounter); //change this to session
+            // }
+
         ?>
     </div>
 

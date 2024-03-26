@@ -19,7 +19,7 @@
   </button>
 
   <button type="button" class="cart" id="ItemCounter" onclick="goToLink()">   
-      0
+      <?php $AmountProduct = 0?>0
   </button>
 
   <button type="button" onclick="link()">

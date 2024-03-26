@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +31,7 @@
     <?php
       include 'products.php';
         $id = $_GET['id'];
+        $amount = $AmountProduct;
         foreach($products as $product){
             if($product['id'] == $id){
                 $price = $product['price'];
@@ -40,7 +45,9 @@
 
                   <div id="cartPrice"><?=$price?></div>
 
-                  <div id="amountInCart">Javascript ItemCounter variabel</div>
+                  <div id="amountInCart"><?php
+                    // echo $_SESSION["ProductInCart"];
+                  ?></div>
 
                   <div id="totalPrice">Totaal prijs</div>
 

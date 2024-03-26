@@ -10,7 +10,7 @@ const counterDiv = document.getElementById("ItemCounter");
 function addProduct(){
   ItemCounter++;
   counterDiv.innerHTML = ItemCounter;
-  localStorage.setItem('amountProduce', ItemCounter);
+  localStorage.setItem('amountProduce', ItemCounter); //change this to session
 }
 
 // Retrieve the saved value from localStorage when the page loads

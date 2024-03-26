@@ -28,7 +28,6 @@ include 'products.php';
 
     </select>
     
-    <br>    
   </div>
   <!--checkbox for what game you wanna display w the products-->
   <div id="gameFilter">
