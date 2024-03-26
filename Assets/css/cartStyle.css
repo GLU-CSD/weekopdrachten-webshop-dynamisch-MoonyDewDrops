@@ -25,8 +25,11 @@ body{
 }
 
 #cart{
-    width: 265%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+
+    grid-area: 3 / 1 / 4 / 6;
+    align-self: center;
 }
 
 .topRow{
@@ -44,9 +47,21 @@ body{
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin-left: -3%;
+    margin-left: -5%;
+    
 }
 
+.priceWbtw{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: -5%;
+}
+
+#productImage{
+  height: 15%;
+  width: 15%;
+}
 
 @media only screen and (max-width: 1150px){
     .container {  

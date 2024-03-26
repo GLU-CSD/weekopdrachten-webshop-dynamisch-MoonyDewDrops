@@ -28,28 +28,37 @@ session_start();
 
 
   <div id="cart">
+    <header style="font-size: 40px; text-align: center;">Product</header>
+    <br>
     <?php
       include 'products.php';
         $id = $_GET['id'];
-        $amount = $AmountProduct;
+        $amount = 1;
         foreach($products as $product){
             if($product['id'] == $id){
                 $price = $product['price'];
+                $times = 1;
+                $total = $price * $times;
+                $btwAmnt = round(((21 / 100) * $total), 2);
+                $WithBtw = $price + $btwAmnt;
                 ?>
+                  
+                  
+                <img src="<?=$product['photo']?>" id="productImage">
+  
+                <br> <br> <br>
 
                 <div class="topRow">
-
+                                
                   <div id="name"><?=$product['title']?></div>
 
-                  <div id="productPrice">productprijs</div>
+                  <div id="productPrice"><?=$total?></div>
 
                   <div id="cartPrice"><?=$price?></div>
 
-                  <div id="amountInCart"><?php
-                    // echo $_SESSION["ProductInCart"];
-                  ?></div>
+                  <div id="amountInCart">1</div>
 
-                  <div id="totalPrice">Totaal prijs</div>
+                  <div id="totalPrice"><?=$total?></div>
 
                 </div>
 
@@ -57,15 +66,15 @@ session_start();
                 
                 <!-- berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan) -->
                 <div class="btwClass">
-                  btw
+                  <?=$btwAmnt?>
 
                 </div>
                 <br> <br>
 
                 <!-- bij deze dan gwn de variabel van de btw + degene van de totale prijs -->
-                <div id="priceWbtw" style="margin-left:90%;">
+                <div class="priceWbtw">
 
-                  prijs met btw
+                  <?=$WithBtw;?>
 
                 </div>
                 <?php
@@ -74,6 +83,7 @@ session_start();
                      
       }
     ?>
+     <button onclick="location.href='purchaseInfo.php'">Pay?</button>
     
   </div>
 
