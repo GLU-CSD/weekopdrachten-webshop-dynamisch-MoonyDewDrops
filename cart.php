@@ -94,7 +94,7 @@ session_start();
           }
           ?>                           
 
-          <button id="Paying" onclick="                           location.href='form.php'">Pay?</button>
+          <button id="Paying" onclick="location.href='form.php'">Pay?</button>
           <button id="ClearCart" onclick="location.href='cart.php'">Clear?</button>
     <?php
       } else {
