@@ -1,3 +1,6 @@
+<script defer src="assets/js/app.js"></script>
+
+
 <!--Where the logo should be placed-->
 <div class="logo">
   <div>
@@ -18,8 +21,8 @@
     Acc
   </button>
 
-  <button type="button" class="cart" id="ItemCounter" onclick="goToLink()">   
-      <?php $AmountProduct = 0?>0
+  <button type="button" class="cart" onclick="goingToCart()">   
+      Cart
   </button>
 
   <button type="button" onclick="link()">

@@ -32,18 +32,26 @@ session_start();
     <br>
     <?php
       include 'products.php';
-        $id = $_GET['id'];
-        $amount = 1;
-        foreach($products as $product){
-            if($product['id'] == $id){
-                $price = $product['price'];
-                $times = 1;
-                $total = $price * $times;
-                $btwAmnt = round(((21 / 100) * $total), 2);
-                $WithBtw = $price + $btwAmnt;
-                ?>
-                  
-                  
+
+      if (isset($_POST['id'])){
+        $id = $_SESSION['produceID'];
+
+        if(isset($_POST['amountOf'])){
+
+        $Amount = $_POST['amountOf'];
+
+        } else{
+
+          echo 'error';
+        }
+
+          foreach($products as $product){
+              if($product['id'] == $id){
+                  $price = $product['price'];
+                  $total = $price * $Amount;
+                  $btwAmnt = round(((21 / 100) * $total), 2);
+                  $WithBtw = $price + $btwAmnt;
+        ?>
                 <img src="<?=$product['photo']?>" id="productImage">
   
                 <br> <br> <br>
@@ -52,13 +60,13 @@ session_start();
                                 
                   <div id="name"><?=$product['title']?></div>
 
-                  <div id="productPrice"><?=$total?></div>
+                  <div id="productPrice">€<?=$total?></div>
 
-                  <div id="cartPrice"><?=$price?></div>
+                  <div id="cartPrice">€<?=$price?></div>
 
-                  <div id="amountInCart">1</div>
+                  <div id="amountInCart"><?=$Amount?></div>
 
-                  <div id="totalPrice"><?=$total?></div>
+                  <div id="totalPrice">€<?=$total?></div>
 
                 </div>
 
@@ -66,7 +74,7 @@ session_start();
                 
                 <!-- berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan) -->
                 <div class="btwClass">
-                  <?=$btwAmnt?>
+                  Btw: €<?=$btwAmnt?>
 
                 </div>
                 <br> <br>
@@ -74,14 +82,19 @@ session_start();
                 <!-- bij deze dan gwn de variabel van de btw + degene van de totale prijs -->
                 <div class="priceWbtw">
 
-                  <?=$WithBtw;?>
-
+                  Total price: €<?=$WithBtw;?>
+ 
                 </div>
+                <br> <br>
                 <?php
             }
 
                      
-      }
+          }
+
+      } else {
+        echo 'Error, id not found';
+      }    
     ?>
      <button onclick="location.href='purchaseInfo.php'">Pay?</button>
     

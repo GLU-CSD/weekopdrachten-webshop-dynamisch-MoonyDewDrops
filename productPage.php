@@ -51,9 +51,14 @@
                             <div id="overall">
                                 <?=$product['title']?> <br> <br>
                                 €<?=$product['price']?> <br> <br>
-                               <?php echo '<button id="description" onclick="addProduct(); location.href=\'cart.php?id=' . $product['id'] . '\'">' ?>
-                                  Add to cart?
-                                </button>
+                                  <form action="cart.php" method="post">
+                                    <input type="number" name="amountOf" placeholder="1" style="width:5%;" required>
+                                    <input type="hidden" name="id" value="<?=$_SESSION['produceID'] = $product['id']?>">
+                                    
+                                      <button type="submit" id="description">
+                                        Add to cart?
+                                      </button>
+                                  </form>
                                 <br><br>
                                 <?=$product['description']?>
                             </div>
@@ -70,19 +75,6 @@
             } if(!$productExist) {
                 echo 'Product not found';
             }
-
-            // //creates counter for cart
-            // ItemCounter = 0;
-
-            // //gets the id of the button
-            // const counterDiv = document.getElementById("ItemCounter");
-
-            //  //adds the numbers like a pro
-            // function addProduct(){
-            //   ItemCounter++;
-            //   counterDiv.innerHTML = ItemCounter;
-            //   localStorage.setItem('amountProduce', ItemCounter); //change this to session
-            // }
 
         ?>
     </div>
