@@ -33,7 +33,7 @@
 
 <!--where things like home, new & sale r placed-->
 <div class="additional-info">
-  <button type="button" onclick="clearCart(); link()">Home</button>
+  <button type="button" onclick="link()">Home</button>
   <button type="button" onclick="link()">New</button>
   <button type="button" onclick="link()">Sale</button>
 </div>

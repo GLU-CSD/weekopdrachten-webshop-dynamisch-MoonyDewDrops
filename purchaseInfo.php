@@ -19,7 +19,7 @@
 <?php 
   include 'header.php'; 
 ?>
-  <div id="PurchaseCompleted">
+  <div class="PurchaseCompleted">
     Thank you for your order! Here is the information of your order:
      
   </div>

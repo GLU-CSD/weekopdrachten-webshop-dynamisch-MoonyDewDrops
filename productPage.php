@@ -31,12 +31,12 @@
 
 <div class="container">
     <!-- Header -->
-    <?php include 'header.php'; ?>
+    <?php include_once 'header.php'; ?>
 
     <!-- Product -->
     <div class="product">
         <?php
-            include 'products.php';
+            include_once 'products.php';
           
             if(!empty($_GET['id'])){
                 $id = $_GET['id'];
@@ -80,7 +80,7 @@
     </div>
 
     <!-- Footer -->
-    <?php include 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
 </div>
 
     

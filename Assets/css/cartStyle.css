@@ -30,6 +30,9 @@ body{
 
     grid-area: 3 / 1 / 4 / 6;
     align-self: center;
+
+    text-align: center;
+    justify-content: center;
 }
 
 .topRow{
@@ -61,6 +64,10 @@ body{
 #productImage{
   height: 15%;
   width: 15%;
+}
+
+.PurchaseCompleted{
+  background: white;
 }
 
 @media only screen and (max-width: 1150px){

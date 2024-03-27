@@ -23,7 +23,7 @@ session_start();
 <div class="container">
 
   <?php
-    include 'header.php';
+    include_once 'header.php';
   ?>
 
 
@@ -31,18 +31,19 @@ session_start();
     <header style="font-size: 40px; text-align: center;">Product</header>
     <br>
     <?php
-      include 'products.php';
-
-      if (isset($_POST['id'])){
+      include_once 'products.php';
+      
+      if (!empty($_SESSION['produceID'])){
         $id = $_SESSION['produceID'];
 
         if(isset($_POST['amountOf'])){
 
         $Amount = $_POST['amountOf'];
 
-        } else{
+        $_SESSION['amountOfProduct'] = $Amount;
 
-          echo 'error';
+        } else{
+          $Amount = $_SESSION['amountOfProduct'];  
         }
 
           foreach($products as $product){
@@ -50,7 +51,7 @@ session_start();
                   $price = $product['price'];
                   $total = $price * $Amount;
                   $btwAmnt = round(((21 / 100) * $total), 2);
-                  $WithBtw = $price + $btwAmnt;
+                  $WithBtw = $total + $btwAmnt;
         ?>
                 <img src="<?=$product['photo']?>" id="productImage">
   
@@ -91,19 +92,24 @@ session_start();
 
                      
           }
-
+          ?>
+          <button onclick="<?php session_unset();?>; location.href='form.php'">Pay?</button>
+          <button onclick="<?php session_unset();?>; location.href='cart.php'">Clear?</button>
+    <?php
       } else {
-        echo 'Error, id not found';
+        echo 'Whoops, looks like your cart is empty. Maybe try adding a few?';
       }    
+
+        
     ?>
-     <button onclick="location.href='purchaseInfo.php'">Pay?</button>
+
     
   </div>
 
 
 
   <?php
-    include 'footer.php';
+    include_once 'footer.php';
   ?>
 
 </div>

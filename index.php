@@ -45,9 +45,9 @@ session_start();
     <?php
     include_once 'header.php';
 
-    include 'filter.php';
+    include_once 'filter.php';
 
-    include 'products.php';
+    include_once 'products.php';
     ?>
 
     <!--Thing where products r inside-->
@@ -84,7 +84,7 @@ session_start();
     </div>
 
     <?php
-      include 'footer.php';
+      include_once 'footer.php';
     ?>
 
 </div>
