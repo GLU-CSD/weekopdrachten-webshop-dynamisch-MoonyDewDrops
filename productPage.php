@@ -52,7 +52,7 @@
                                 <?=$product['title']?> <br> <br>
                                 €<?=$product['price']?> <br> <br>
                                   <form action="cart.php" method="post">
-                                    <input type="number" name="amountOf" placeholder="1" style="width:5%;" required>
+                                    <input type="number" name="amountOf" placeholder="1" style="width:10%;" required>
                                     <input type="hidden" name="id" value="<?=$_SESSION['produceID'] = $product['id']?>">
                                     
                                       <button type="submit" id="description">
