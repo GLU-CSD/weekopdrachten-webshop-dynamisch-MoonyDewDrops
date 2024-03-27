@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-// function setCartedProduct(){
-//   $_SESSION["productID"] = $product['id'];
-// }
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -93,12 +90,4 @@ session_start();
 
 </html>
 
-<!-- Thing i wanna ask: 
-
-1. Cart math                                              (in cart.php) (After Sessions work)
-2. Sessions n how i need to incorporate them into my code (in app.js, productPage.php) (Is getting handled tmrw, Thomas will explain Sessions n stuff)
-3. forms and their everything                             (in filter.php, form.php) (Tmrw or Wednesday so i have sum to work on in vacation (maybe idk 
-if i'll work during the vacation yet))
-
--->
 

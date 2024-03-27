@@ -92,9 +92,10 @@ session_start();
 
                      
           }
-          ?>
-          <button onclick="<?php session_unset();?>; location.href='form.php'">Pay?</button>
-          <button onclick="<?php session_unset();?>; location.href='cart.php'">Clear?</button>
+          ?>                           
+
+          <button id="Paying" onclick="                           location.href='form.php'">Pay?</button>
+          <button id="ClearCart" onclick="location.href='cart.php'">Clear?</button>
     <?php
       } else {
         echo 'Whoops, looks like your cart is empty. Maybe try adding a few?';
