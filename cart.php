@@ -34,7 +34,13 @@ session_start();
       include_once 'products.php';
       
       if (!empty($_SESSION['produceID'])){
-        $id = $_SESSION['produceID'];
+        $products = $_SESSION['produceID'];
+
+        $id = $products['id'];
+        $price = $products['price'];
+        $coverPhoto = $products['photo'];
+        $title = $products['title'];
+
 
         if(isset($_POST['amountOf'])){
 
@@ -47,19 +53,18 @@ session_start();
         }
 
           foreach($products as $product){
-              if($product['id'] == $id){
-                  $price = $product['price'];
+              if(!empty($product['id'] == $id)){
                   $total = $price * $Amount;
                   $btwAmnt = round(((21 / 100) * $total), 2);
                   $WithBtw = $total + $btwAmnt;
         ?>
-                <img src="<?=$product['photo']?>" id="productImage">
+                <img src="<?=$coverPhoto?>" alt="Product Image" id="productImage">
   
                 <br> <br> <br>
 
                 <div class="topRow">
                                 
-                  <div id="name"><?=$product['title']?></div>
+                  <div id="name"><?=$title?></div>
 
                   <div id="productPrice">€<?=$total?></div>
 

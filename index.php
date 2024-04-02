@@ -106,4 +106,24 @@ session_start();
   Maybe if im feeling quirky i might give a go @ acc making the filter for the products work, though thats an additional goal that isn't really 
   important to me at the moment
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Also do using simple html to display a project/multiple project inline a project like with a prortfolio.
 -->
