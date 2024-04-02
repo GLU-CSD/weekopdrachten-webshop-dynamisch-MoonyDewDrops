@@ -95,7 +95,7 @@ session_start();
           ?>                           
 
           <button id="Paying" onclick="location.href='form.php'">Pay?</button>
-          <button id="ClearCart" onclick="location.href='cart.php'">Clear?</button>
+          <button id="ClearCart" onclick="location.href='intercept.php'">Clear?</button>
     <?php
       } else {
         echo 'Whoops, looks like your cart is empty. Maybe try adding a few?';

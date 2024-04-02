@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,7 +97,7 @@ session_start();
           <label for="voorwaarden" required>Ik ga akkoord met de algemene voorwaarden</label><br><br>
       
 
-          <input type="submit" value="Submit" onclick="<?php session_unset();?>;">
+          <input type="submit" value="Submit">
 
         </form>
 
