@@ -62,6 +62,7 @@ session_start();
       
           <img src="<?=$product['photo']?>" alt="<?=$product['title']?>" 
           style="width: 100%; height: auto">
+          <br> <br>
           <?=$product['title']?>
           <p>€<?=$product['price']?></p>
 
@@ -90,4 +91,19 @@ session_start();
 
 </html>
 
+<!-- plan for this week:
 
+  Make it so the info of the product is sent with the form in payment procedure. Most likely with form info like you get a whole thing
+  out here, tho idk how imma work this. (Medium/Difficult)
+
+  (!!!! PRIORITY !!!!) 
+  Make it so you can buy multiple products/put multiple products in your cart at a time. (Difficult, most likely need help w this.)
+  (!!!! PRIORITY !!!!) 
+
+  Give products proper descriptions/additional images that are needed(Easy, although i dont know what im gonna give em since its just audio im
+  selling out here. Maybe a photo of the product handlings, like that you dont do refunds or sum? idk im reaching HARD rn.)
+
+  Maybe if im feeling quirky i might give a go @ acc making the filter for the products work, though thats an additional goal that isn't really 
+  important to me at the moment
+
+-->

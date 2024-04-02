@@ -10,7 +10,7 @@ session_unset();
 
     <link rel="stylesheet" href="assets/css/0TopBalk.css">
     <link rel="stylesheet" href="assets/css/1navigationBalk.css">
-    <link rel="stylesheet" href="assets/css/cartStyle.css">
+    <link rel="stylesheet" href="assets/css/purchase.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 
     <!--Thing that links the javascript to this document-->
@@ -19,18 +19,20 @@ session_unset();
     <title>Purchase Completed</title>
 </head>
 <body>
+<div class="container">
+  <?php 
+    include 'header.php'; 
+  ?>
 
-<?php 
-  include 'header.php'; 
-?>
-  <div class="PurchaseCompleted">
+  <div class="info">
     Thank you for your order! Here is the information of your order:
      
   </div>
 
-<?php
-  include 'footer.php';
-?>
-    
+  <?php
+    include 'footer.php';
+  ?>
+</div>
+
 </body>
 </html>
