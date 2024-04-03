@@ -53,8 +53,7 @@
                                 €<?=$product['price']?> <br> <br>
                                   <form action="cart.php" method="post">
                                     <input type="number" name="amountOf" placeholder="1" style="width:10%;" required>
-                                    <input type="hidden" name="id" value="<?php $_SESSION['produceID'] = ['id' => $product['id'], 'price' =>
-                                      $product['price'], 'title' => $product['title'], 'photo' => $product['photo']];?>">
+                                    <input type="hidden" name="id" value="<?=$product['id'] ?>">
                                     
                                       <button type="submit" id="description">
                                         Add to cart?

@@ -33,90 +33,72 @@ session_start();
     <?php
       include_once 'products.php';
       
+            if(isset($_POST['amountOf'])){
+        
+              $_SESSION['cart'][$_POST['id']] = $_POST['amountOf'];
+              
+              foreach ($_SESSION['cart'] as $id => $Amount) {
 
-      if (!empty($_SESSION['produceID']) && !empty($_POST['amountOf'])){
+                foreach ($products as $product) {
 
-        $list = 1;
+                  if ($product['id'] == $id) {
 
-        $produce = $_SESSION['produceID'];
+                    $total = $product['price'] * $Amount;
+                    $btwAmnt = round(((21 / 100) * $total), 2);
+                    $WithBtw = $total + $btwAmnt;
+                    ?>
 
-        $id = $produce['id'];
-        $price = $produce['price'];
-        $title = $produce['title'];
-        $photo = $produce['photo'];
+                    <div class="product">
 
-        if(isset($_POST['amountOf'])){
+                      <img src="<?=$product['photo']?>" alt="Product Image">
 
-        $Amount = $_POST['amountOf'];
+                      <div class="product-details">
 
-        $_SESSION['amountOfProduct'] = $Amount;
+                        <div class="name">Name: <?=$product['title']?></div>
+                        <div class="productPrice">Product price: €<?=$total?></div>
+                        <div class="cartPrice">Individual product price: €<?=$product['price']?></div>
+                        <div class="amountInCart">Amount : <?=$Amount?></div>
+                        <div class="totalPrice">Total Price: €<?=$total?></div>
 
-        } else{
+                      </div>
+                      
+                      <!-- berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan) -->
+                      <div class="btwClass">
 
-          $Amount = $_SESSION['amountOfProduct'];  
-        }
+                        Btw: €<?=$btwAmnt?>
 
-          foreach ($products as $product) {
-              if(!empty($product['id'] === $id)){
+                      </div>
 
-                  $total = $price * $Amount;
-                  $btwAmnt = round(((21 / 100) * $total), 2);
-                  $WithBtw = $total + $btwAmnt;
-        ?>
-                <img src="<?=$photo?>" alt="Product Image" id="productImage">
-  
-                <br> <br> <br>
+                      <div class="priceWbtw">
 
-                <div class="topRow">
-                                
-                  <div id="name"><?=$title?></div>
+                        Total price: €<?=$WithBtw?>
 
-                  <div id="productPrice">€<?=$total?></div>
+                      </div>
 
-                  <div id="cartPrice">€<?=$price?></div>
+                    </div>
 
-                  <div id="amountInCart"><?=$Amount?></div>
+                    <?php
+                  }
 
-                  <div id="totalPrice">€<?=$total?></div>
+                }
 
-                </div>
-
-                <br> <br>
-                
-                <!-- berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan) -->
-                <div class="btwClass">
-                  Btw: €<?=$btwAmnt?>
-
-                </div>
-                <br> <br>
-
-                <!-- bij deze dan gwn de variabel van de btw + degene van de totale prijs -->
-                <div class="priceWbtw">
-
-                  Total price: €<?=$WithBtw;?>
- 
-                </div>
-                <br> <br>
-                <?php
               }
-                     
-          }
-          ?>                           
+              
+              ?>
 
-          <button id="Paying" onclick="location.href='form.php'">Pay?</button>
-          <button id="ClearCart" onclick="location.href='intercept.php'">Clear?</button>
-    <?php
-      } else {
-        echo 'Whoops, looks like your cart is empty. Maybe try adding a few things?';
-      }    
+              <button id="Paying" onclick="location.href='form.php'">Pay?</button>
+              <button id="ClearCart" onclick="location.href='intercept.php'">Clear?</button>
 
+              <?php
+            } else {
+
+          echo 'Whoops, looks like your cart is empty. Maybe try adding a few things?';
+
+          }     
         
     ?>
 
-    
   </div>
-
-
 
   <?php
     include_once 'footer.php';

@@ -24,6 +24,10 @@ body{
       background-color: white;
 }
 
+.product-details{
+  align-content: right;
+  text-align: right;
+}
 #cart{
     width: 100%;
     height: 100%;
