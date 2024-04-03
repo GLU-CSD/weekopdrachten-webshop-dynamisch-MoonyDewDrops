@@ -2,7 +2,7 @@
 <script defer src="assets/js/slider.js"></script>
 
 <?php
-include 'products.php';
+include_once 'products.php';
 ?>
 
 <!--the thing that filters everything-->

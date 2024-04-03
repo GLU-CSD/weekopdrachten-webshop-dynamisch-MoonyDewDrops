@@ -100,6 +100,8 @@ session_start();
   Make it so you can buy multiple products/put multiple products in your cart at a time. (Difficult, most likely need help w this.)
   (!!!! PRIORITY !!!!) 
 
+  Bro idk what i ddi but session tthing works now but only for 1 product bro i swear i can not be doing this rn
+
   Give products proper descriptions/additional images that are needed(Easy, although i dont know what im gonna give em since its just audio im
   selling out here. Maybe a photo of the product handlings, like that you dont do refunds or sum? idk im reaching HARD rn.)
 

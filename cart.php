@@ -28,19 +28,22 @@ session_start();
 
 
   <div id="cart">
-    <header style="font-size: 40px; text-align: center;">Product</header>
+    <header style="font-size: 40px; text-align: center;">Cart</header>
     <br>
     <?php
       include_once 'products.php';
       
-      if (!empty($_SESSION['produceID'])){
-        $products = $_SESSION['produceID'];
 
-        $id = $products['id'];
-        $price = $products['price'];
-        $coverPhoto = $products['photo'];
-        $title = $products['title'];
+      if (!empty($_SESSION['produceID']) && !empty($_POST['amountOf'])){
 
+        $list = 1;
+
+        $produce = $_SESSION['produceID'];
+
+        $id = $produce['id'];
+        $price = $produce['price'];
+        $title = $produce['title'];
+        $photo = $produce['photo'];
 
         if(isset($_POST['amountOf'])){
 
@@ -49,16 +52,18 @@ session_start();
         $_SESSION['amountOfProduct'] = $Amount;
 
         } else{
+
           $Amount = $_SESSION['amountOfProduct'];  
         }
 
-          foreach($products as $product){
-              if(!empty($product['id'] == $id)){
+          foreach ($products as $product) {
+              if(!empty($product['id'] === $id)){
+
                   $total = $price * $Amount;
                   $btwAmnt = round(((21 / 100) * $total), 2);
                   $WithBtw = $total + $btwAmnt;
         ?>
-                <img src="<?=$coverPhoto?>" alt="Product Image" id="productImage">
+                <img src="<?=$photo?>" alt="Product Image" id="productImage">
   
                 <br> <br> <br>
 
@@ -93,8 +98,7 @@ session_start();
                 </div>
                 <br> <br>
                 <?php
-            }
-
+              }
                      
           }
           ?>                           
@@ -103,7 +107,7 @@ session_start();
           <button id="ClearCart" onclick="location.href='intercept.php'">Clear?</button>
     <?php
       } else {
-        echo 'Whoops, looks like your cart is empty. Maybe try adding a few?';
+        echo 'Whoops, looks like your cart is empty. Maybe try adding a few things?';
       }    
 
         
