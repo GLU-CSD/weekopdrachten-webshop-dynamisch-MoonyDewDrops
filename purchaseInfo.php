@@ -32,6 +32,9 @@ session_unset();
     <div class="info">
       Thank you for your order! Here is the information of your order:
 
+
+      Thank you again for shopping with us!
+
     </div>
 
     <?php
