@@ -8,30 +8,30 @@ include_once 'products.php';
 <!--the thing that filters everything-->
 <div class="Filter">
 
-<div id="itemsFound">
-  <p>Total items found: <?=count($products);?></p> <!--Here put variable of the amount of items, do later when u got javascript but for now a placeholder-->
-</div>
+  <div id="itemsFound">
+    <p>Total items found: <?= count($products); ?></p> <!--Here put variable of the amount of items, do later when u got javascript but for now a placeholder-->
+  </div>
 
-<div id="sortBy">
-<P>Sort by:</P>
+  <div id="sortBy">
+    <P>Sort by:</P>
 
-<!--the selector for how you want to view products-->
-<form>
-    <select style="text-align: center;">
+    <!--the selector for how you want to view products-->
+    <form>
+      <select style="text-align: center;">
 
-      <option value="1">Newest</option>
-      <option value="2">Oldest</option>
-      <option value="3">Price: Low-High</option>
-      <option value="4">Price: High-Low</option>          
-      <option value="5">Duration: Short-Long</option>
-      <option value="6">Duration: Long-Short</option>
+        <option value="1">Newest</option>
+        <option value="2">Oldest</option>
+        <option value="3">Price: Low-High</option>
+        <option value="4">Price: High-Low</option>
+        <option value="5">Duration: Short-Long</option>
+        <option value="6">Duration: Long-Short</option>
 
-    </select>
-    
+      </select>
+
   </div>
   <!--checkbox for what game you wanna display w the products-->
   <div id="gameFilter">
-    <p>Type:</p>    
+    <p>Type:</p>
     <input type="checkbox" id="Undertale" name="Undertale" value="type1" style="cursor: pointer;">
     <label for="Undertale"> Undertale Remix</label>
     <br>
@@ -52,7 +52,7 @@ include_once 'products.php';
     <div class="slidecContainer">
       <input type="range" min="1" max="30" value="30" class="slider" id="myRange">
       <p>€0 - €<span id="prijs"></span></p>
-    
+
     </div>
   </div>
 
@@ -60,6 +60,6 @@ include_once 'products.php';
   <div id="submitFilter">
     <button type="submit">Filter?</button>
   </div>
-</form>
+  </form>
 
 </div>

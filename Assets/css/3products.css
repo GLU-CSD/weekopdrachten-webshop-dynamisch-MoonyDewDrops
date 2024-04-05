@@ -2,16 +2,16 @@
 The star of the show, the products. 
 Where everything is sorted into a grid just like the .container class
 */
-.products {  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /*grid-template-rows: 1fr 1fr 1fr 1fr 0.1fr;*/
-    gap: 15px 15px;
-    /*grid-auto-flow: row;*/
-    grid-area: products;
-    padding: 3%;
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*grid-template-rows: 1fr 1fr 1fr 1fr 0.1fr;*/
+  gap: 15px 15px;
+  /*grid-auto-flow: row;*/
+  grid-area: products;
+  padding: 3%;
 
-    grid-template-areas: 
+  grid-template-areas:
     'product product product'
     'product product product'
     'product product product'
@@ -20,120 +20,147 @@ Where everything is sorted into a grid just like the .container class
     'product product product'
     'product product product'
     'nextPage nextPage nextPage';
-  
-      /*style*/
-  
-      border: 2px solid #6495ED;
-      background-color: white;
-      color: #13293D;
-      text-align: center;
+
+  /*style*/
+
+  border: 2px solid #6495ED;
+  background-color: white;
+  color: #13293D;
+  text-align: center;
+}
+
+/*The class that makes it so i dont have to repeat this with all of them like i have to with the grid-area*/
+.product-item {
+  border: 2px solid #6495ED;
+  background-color: white;
+  padding: 5%;
+  border-radius: 15px;
+  height: 90%;
+}
+
+.product-item img {
+  animation: fadeIn 2s;
+}
+
+/*makes it diff colour when mouse hovers over it, makes it intresting*/
+.product-item:hover {
+  background-color: rgb(235, 235, 235);
+  color: #13293D;
+  cursor: pointer;
+}
+
+
+/*Thing i already made for when i want to do other pages, like if i want 10 on each page. Maybe make a filter for how many products you want to show per page*/
+#nextPage {
+  grid-area: nextPage;
+  border: 2px solid #6495ED;
+  width: 80%;
+  margin-bottom: 20%;
+  margin-left: 5%;
+}
+
+.skip {
+  border: 2px solid #6495ED;
+  background-color: white;
+  padding: 5%;
+  border-radius: 15px;
+}
+
+/*Add to cart buttons*/
+.productButtons {
+  border: 1px solid #6495ED;
+  border-radius: 15px;
+}
+
+.productButtons:hover {
+  cursor: pointer;
+}
+
+/* responsiveness below */
+@media only screen and (max-width: 745px) {
+  .products {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "product product"
+      /*1*/
+      "product product"
+      /*2*/
+      "product product"
+      /*3*/
+      "product product"
+      /*4*/
+      "product product"
+      /*5*/
+      "product product"
+      /*6*/
+      "product product"
+      /*7*/
+      "product product"
+      /*8*/
+      "product product"
+      /*9*/
+      "product product"
+      /*10*/
+      "product blank"
+      /*11*/
+      "nextPage nextPage";
+    /*12*/
   }
-  
-  /*The class that makes it so i dont have to repeat this with all of them like i have to with the grid-area*/
-  .product-item{
-    border: 2px solid #6495ED;
-    background-color: white;
-    padding: 5%;
-    border-radius: 15px;
-    height: 90%;
+}
+
+@media only screen and (max-width: 560px) {
+  .products {
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "product"
+      "product"
+      /*1*/
+      "product"
+      "product"
+      /*2*/
+      "product"
+      "product"
+      /*3*/
+      "product"
+      "product"
+      /*4*/
+      "product"
+      "product"
+      /*5*/
+      "product"
+      "product"
+      /*6*/
+      "product"
+      "product"
+      /*7*/
+      "product"
+      "product"
+      /*8*/
+      "product"
+      "product"
+      /*9*/
+      "product"
+      "product"
+      /*10*/
+      "product"
+      /*11*/
+      "nextPage";
+      /*12*/
   }
 
-  .product-item img{
-    animation: fadeIn 2s;
-  }
-  
-  /*makes it diff colour when mouse hovers over it, makes it intresting*/
-  .product-item:hover{
-    background-color: rgb(235, 235, 235);
-    color: #13293D;  
-    cursor: pointer;
+}
+
+/* animation for loading in n stuff */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  
-  /*Thing i already made for when i want to do other pages, like if i want 10 on each page. Maybe make a filter for how many products you want to show per page*/
-  #nextPage{
-    grid-area: nextPage;
-    border: 2px solid #6495ED;
-    width: 80%;
-    margin-bottom: 20%;
-    margin-left: 5%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .skip{
-    border: 2px solid #6495ED;
-    background-color: white;
-    padding: 5%;
-    border-radius: 15px;
-  }
-  
-  /*Add to cart buttons*/
-  .productButtons{
-    border: 1px solid #6495ED;  
-    border-radius: 15px;
-  }
-  
-  .productButtons:hover{
-    cursor: pointer;
-  }
-
-  @media only screen and (max-width: 745px){
-    .products{      
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-        "product product" /*1*/
-        "product product"/*2*/
-        "product product"/*3*/
-        "product product"/*4*/
-        "product product"/*5*/
-        "product product"/*6*/
-        "product product"/*7*/
-        "product product"/*8*/
-        "product product"/*9*/
-        "product product"/*10*/
-        "product blank"/*11*/
-        "nextPage nextPage";/*12*/
-      }
-  }
-
-  @media only screen and (max-width: 560px){
-    .products{      
-
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-        "product"
-        "product" /*1*/
-        "product" 
-        "product"/*2*/
-        "product" 
-        "product"/*3*/
-        "product" 
-        "product"/*4*/
-        "product" 
-        "product"/*5*/
-        "product" 
-        "product"/*6*/
-        "product" 
-        "product"/*7*/
-        "product" 
-        "product"/*8*/
-        "product" 
-        "product"/*9*/
-        "product" 
-        "product"/*10*/
-        "product" /*11*/
-        "nextPage";/*12*/
-    }
-  
-  }
-
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

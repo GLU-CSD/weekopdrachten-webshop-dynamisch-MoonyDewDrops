@@ -6,6 +6,6 @@ var output = document.getElementById("prijs");
 output.innerHTML = slider.value;
 
 //when it changes, the value (so also the text) changes
-slider.oninput = function() {
+slider.oninput = function () {
   output.innerHTML = this.value;
 }

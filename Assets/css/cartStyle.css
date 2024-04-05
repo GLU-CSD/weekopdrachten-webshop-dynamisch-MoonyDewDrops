@@ -1,100 +1,92 @@
-body{
-    background-color: #5a7098;
-    font-family: sans-serif;
+body {
+  background-color: #5a7098;
+  font-family: sans-serif;
 }
-  
+
 /*grid layout for everything*/
-.container {  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.15fr 0.2fr 2fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "logo search search search addons"
-      "additional-info additional-info additional-info additional-info additional-info"
-      "cart cart cart cart cart"
-      "disclaimer disclaimer disclaimer disclaimer disclaimer";
-      width: 80%;
-      margin-left: 10%;
-  
-      /*style*/
-      border: 2px solid #6495ED;
-      height: auto;
-      background-color: white;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 0.2fr 2fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo search search search addons"
+    "additional-info additional-info additional-info additional-info additional-info"
+    "cart cart cart cart cart"
+    "disclaimer disclaimer disclaimer disclaimer disclaimer";
+  width: 80%;
+  margin-left: 10%;
+
+  /*style*/
+  border: 2px solid #6495ED;
+  height: auto;
+  background-color: white;
 }
 
-.product-details{
-  align-content: right;
-  text-align: right;
-}
-#cart{
-    width: 100%;
-    height: 100%;
-
-    grid-area: 3 / 1 / 4 / 6;
-    align-self: center;
-
-    text-align: center;
-    justify-content: center;
+/* Makes it so the details of the purchase is in the  center  */
+.product-details {
+  align-content: center;
+  text-align: center;
 }
 
-.topRow{
-    display: flex;
-    align-items: center;
-    
-    text-align: center;
-    width: 100%;
-    gap: 5%;
+/* actual cart, where everything is in like the deets of everything. */
+#cart {
+  width: 100%;
+  height: 100%;
 
-    
+  grid-area: 3 / 1 / 4 / 6;
+  align-self: center;
+
+  text-align: center;
+  justify-content: center;
 }
 
-.btwClass{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-left: -5%;
-    
-}
-
-.priceWbtw{
+/* the 2 things below r for the text of the btw n without */
+.btwClass {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   margin-left: -5%;
+  align-content: center;
+  text-align: center;
 }
 
-#productImage{
-  height: 15%;
-  width: 15%;
+.priceWbtw {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: -5%;
+  align-content: center;
+  text-align: center;
 }
 
-@media only screen and (max-width: 1150px){
-    .container {  
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 0.27fr 0.125fr 2fr 1fr;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-        "logo logo search search addons"
-        "additional-info additional-info additional-info additional-info additional-info"
-        "cart cart cart cart cart"
-        "disclaimer disclaimer disclaimer disclaimer disclaimer";
-      width: 80%;
-      margin-left: 10%;
-  
-      /*style*/
-      border: 2px solid #6495ED;
-      height: auto;
-      background-color: white;
+/*For responsiveness. This changes the grid layout so it's better displayed and doesn't bug out*/
+@media only screen and (max-width: 1150px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.27fr 0.125fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo logo search search addons"
+      "additional-info additional-info additional-info additional-info additional-info"
+      "cart cart cart cart cart"
+      "disclaimer disclaimer disclaimer disclaimer disclaimer";
+    width: 80%;
+    margin-left: 10%;
+
+    /*style*/
+    border: 2px solid #6495ED;
+    height: auto;
+    background-color: white;
   }
 }
-  
-/*For responsiveness. This changes the grid layout so it's better displayed and doesn't bug out*/
-@media only screen and (max-width: 745px){
-  .container{
+
+/* respond if ness */
+@media only screen and (max-width: 745px) {
+  .container {
     grid-template-columns: 0.5fr 1fr 1fr;
     grid-template-rows: 0.2fr 0.2fr 1.3fr 1.4fr;
     grid-template-areas:
@@ -105,11 +97,11 @@ body{
   }
 }
 
-  
+
 /*Responsiveness for even smaller screens*/
-@media only screen and (max-width: 450px){
- 
-  .container{
+@media only screen and (max-width: 450px) {
+
+  .container {
     grid-template-columns: 0.5fr 2fr 1fr;
     grid-template-rows: 0.15fr 0.15fr 2fr 1fr;
     grid-template-areas:
@@ -118,5 +110,5 @@ body{
       "cart cart cart"
       "disclaimer disclaimer disclaimer";
   }
-  
+
 }

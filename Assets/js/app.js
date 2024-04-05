@@ -13,7 +13,7 @@ function productPage() {
   window.location.href = "productPage.php";
 }
 
-function goingToCart(){
+function goingToCart() {
   window.location.href = "cart.php";
 }
 

@@ -4,8 +4,7 @@
 <!--Where the logo should be placed-->
 <div class="logo">
   <div>
-    <img src="assets/Images/realLogo.jpg" alt="SharaX" 
-    style="height: 30px; width: 70px;">
+    <img src="assets/Images/realLogo.jpg" alt="SharaX" style="height: 30px; width: 70px;">
   </div>
 </div>
 
@@ -21,8 +20,8 @@
     Acc
   </button>
 
-  <button type="button" class="cart" onclick="goingToCart()">   
-      Cart
+  <button type="button" class="cart" onclick="goingToCart()">
+    Cart
   </button>
 
   <button type="button" onclick="link()">
@@ -37,5 +36,3 @@
   <button type="button" onclick="link()">New</button>
   <button type="button" onclick="link()">Sale</button>
 </div>
-
-    
