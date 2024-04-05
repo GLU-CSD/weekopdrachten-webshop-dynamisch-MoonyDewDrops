@@ -60,7 +60,7 @@ session_start();
         <!-- does all the info of the product so they're displayed correctly. Gathers them from the product array in the products.php file -->
         <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
 
-          <div id="product" class="product-item">
+          <div class="product-item">
 
             <img src="<?= $product['photo'] ?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
             <br> <br>

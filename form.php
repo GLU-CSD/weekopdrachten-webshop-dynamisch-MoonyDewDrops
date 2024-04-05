@@ -45,11 +45,11 @@
         <label for="aanhef"></label>
 
         <select id="aanhef" name="aanhef" required>
-
+          <option value="" disabled selected>Select</option>
           <option value="Dhr.">Mr.</option>
           <option value="Mevr.">Mrs.</option>
-
-        </select><br><br>
+        </select>
+        <br><br>
 
         <label for="voornaam">First name:</label>
         <input type="text" id="voornaam" name="voornaam" required><br><br>
@@ -93,7 +93,7 @@
 
 
         <input type="checkbox" id="voorwaarden" name="voorwaarden" required>
-        <label for="voorwaarden" required>I agree to the terms and conditions</label><br><br>
+        <label for="voorwaarden">I agree to the terms and conditions</label><br><br>
 
 
         <input type="submit" value="Submit">

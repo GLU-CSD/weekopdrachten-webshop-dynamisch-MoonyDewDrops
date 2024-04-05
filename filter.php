@@ -27,7 +27,7 @@ include_once 'products.php';
         <option value="6">Duration: Long-Short</option>
 
       </select>
-
+    </form>
   </div>
   <!--checkbox for what game you wanna display w the products-->
   <div id="gameFilter">
@@ -60,6 +60,5 @@ include_once 'products.php';
   <div id="submitFilter">
     <button type="submit">Filter?</button>
   </div>
-  </form>
 
 </div>
