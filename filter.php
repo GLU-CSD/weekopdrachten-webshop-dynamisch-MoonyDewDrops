@@ -1,5 +1,5 @@
 <!--Thing that links the javascript to this document-->
-<script defer src="/assets/js/slider.js"></script>
+<script defer src="assets/js/slider.js"></script>
 
 <?php
 include_once 'products.php';

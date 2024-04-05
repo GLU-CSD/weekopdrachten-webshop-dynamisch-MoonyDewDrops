@@ -1,10 +1,10 @@
-<script defer src="/assets/js/app.js"></script>
+<script defer src="assets/js/app.js"></script>
 
 
 <!--Where the logo should be placed-->
 <div class="logo">
   <div>
-    <img src="/assets/Images/realLogo.jpg" alt="SharaX" style="height: 30px; width: 70px;">
+    <img src="assets/Images/realLogo.jpg" alt="SharaX" style="height: 30px; width: 70px;">
   </div>
 </div>
 

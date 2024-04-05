@@ -12,13 +12,13 @@ session_unset();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- all the styles n stuff -->
-  <link rel="stylesheet" href="/assets/css/0TopBalk.css">
-  <link rel="stylesheet" href="/assets/css/1navigationBalk.css">
-  <link rel="stylesheet" href="/assets/css/purchase.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/0TopBalk.css">
+  <link rel="stylesheet" href="assets/css/1navigationBalk.css">
+  <link rel="stylesheet" href="assets/css/purchase.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 
   <!--Thing that links the javascript to this document-->
-  <script defer src="/assets/js/app.js"></script>
+  <script defer src="assets/js/app.js"></script>
 
   <title>Purchase Completed</title>
 </head>

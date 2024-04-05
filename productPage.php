@@ -9,19 +9,19 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product page</title>
 
-  <link rel="stylesheet" href="/assets/css/pageProductLayout.css">
+  <link rel="stylesheet" href="assets/css/pageProductLayout.css">
 
-  <link rel="stylesheet" href="/assets/css/0TopBalk.css">
-  <link rel="stylesheet" href="/assets/css/1navigationBalk.css">
-  <link rel="stylesheet" href="/assets/css/pageProduct.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/0TopBalk.css">
+  <link rel="stylesheet" href="assets/css/1navigationBalk.css">
+  <link rel="stylesheet" href="assets/css/pageProduct.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 
-  <link rel="shortcut icon" href="/assets/Images/favicon.ico">
+  <link rel="shortcut icon" href="assets/Images/favicon.ico">
   <meta name="theme-color" content="#fafafa">
 
   <!--Thing that links the javascript to this document-->
-  <script defer src="/assets/js/ImageSelector.js"></script>
-  <script defer src="/assets/js/app.js"></script>
+  <script defer src="assets/js/ImageSelector.js"></script>
+  <script defer src="assets/js/app.js"></script>
 
 </head>
 
