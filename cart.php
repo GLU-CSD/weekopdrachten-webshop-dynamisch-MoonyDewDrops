@@ -10,13 +10,13 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/assets/css/0TopBalk.css">
-  <link rel="stylesheet" href="/assets/css/1navigationBalk.css">
-  <link rel="stylesheet" href="/assets/css/cartStyle.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/0TopBalk.css">
+  <link rel="stylesheet" href="assets/css/1navigationBalk.css">
+  <link rel="stylesheet" href="assets/css/cartStyle.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 
   <!--Thing that links the javascript to this document-->
-  <script defer src="/assets/js/app.js"></script>
+  <script defer src="assets/js/app.js"></script>
 
   <title>Cart</title>
 </head>
