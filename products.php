@@ -11,7 +11,7 @@ $products = [
             "duration" => 3.08,
             "age" => 1,
             "photo" => "https://i.scdn.co/image/ab67616d0000b27337f7b15671c5778cf0a24408",
-            "photo2" => "https://www.sanrio.com/cdn/shop/files/840298909971-1_800x.png?v=1708976679",
+            "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
             "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
             "description" => "a"
         ],
@@ -24,7 +24,7 @@ $products = [
             "duration" => 3.57,
             "age" => 2,
             "photo" => "https://i.scdn.co/image/ab67616d0000b2735eeb8bef2852830aca370ecc",
-            "photo2" => "",
+            "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
             "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
             "description" => "b"
         ],
@@ -37,7 +37,7 @@ $products = [
             "duration" => 5.03,
             "age" => 3,
             "photo" => "https://i.scdn.co/image/ab67616d0000b273edc69ca99ecaa858859916d6",
-            "photo2" => "",
+            "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
             "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
             "description" => "c"
 
@@ -51,7 +51,7 @@ $products = [
             "duration" => 3.38,
             "age" => 4,
             "photo" => "https://i.scdn.co/image/ab67616d0000b27393e217d47ab46afb24e2add4",
-            "photo2" => "",
+            "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
             "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
             "description" => "d"
         ],
@@ -64,7 +64,7 @@ $products = [
             "duration" => 4.14,
             "age" => 5,
             "photo" => "https://i.scdn.co/image/ab67616d0000b27361c527fbc1d9bd0b09ef7da1",
-            "photo2" => "",
+            "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
             "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
             "description" => "e"
         ],
@@ -77,7 +77,7 @@ $products = [
             "duration" => 2.52,
             "age" => 6,
             "photo" => "https://i.scdn.co/image/ab67616d0000b273ffbee89074df18aeb7b61c58",
-            "photo2" => "",
+            "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
             "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
             "description" => "f"
             
@@ -91,7 +91,7 @@ $products = [
           "duration" => 2.48,
           "age" => 7,
           "photo" => "https://i.scdn.co/image/ab67616d0000b27390929a488d253121a9e8a2d6",
-          "photo2" => "",
+          "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
           "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
           "description" => "g"
           
@@ -106,7 +106,7 @@ $products = [
             "duration" => 3.10,
             "age" => 8,
             "photo" => "https://i.scdn.co/image/ab67616d0000b2736a487b8ee6230dceba4725f2",
-            "photo2" => "",
+            "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
             "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
             "description" => "h"
         ],
@@ -120,7 +120,7 @@ $products = [
           "duration" => 3.17,
           "age" => 9,
           "photo" => "https://i.scdn.co/image/ab67616d0000b27344c914f478ca06b3fe8076a2",
-          "photo2" => "",
+          "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
           "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
           "description" => "i"
         ],
@@ -134,7 +134,7 @@ $products = [
           "duration" => 3.25,
           "age" => 10,
           "photo" => "https://i.scdn.co/image/ab67616d0000b273bce6b3d91965fe4b8fa47ed6",
-          "photo2" => "",
+          "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
           "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
           "description" => "j"
       ],
@@ -148,7 +148,7 @@ $products = [
           "duration" => 3.05,
           "age" => 11,
           "photo" => "https://i.scdn.co/image/ab67616d0000b273a835e1228c922fdcb8fc9feb",
-          "photo2" => "",
+          "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
           "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
           "description" => "k"
       ],
@@ -162,7 +162,7 @@ $products = [
           "duration" => 3.57,
           "age" => 12,
           "photo" => "https://i.scdn.co/image/ab67616d0000b2731ee6236a101898abb7a2e161",
-          "photo2" => "",
+          "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
           "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
           "description" => "l"
       ],
@@ -175,7 +175,7 @@ $products = [
         "duration" => 3.44,
         "age" => 13,
         "photo" => "https://i.scdn.co/image/ab67616d0000b273eb11675bbb9873e9d96ff650",
-        "photo2" => "",
+        "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
         "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
         "description" => "m"
       ],
@@ -188,7 +188,7 @@ $products = [
         "duration" => 4.48,
         "age" => 14,
         "photo" => "https://i.scdn.co/image/ab67616d0000b27389b5314333251f420d1c09a0",
-        "photo2" => "",
+        "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
         "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
         "description" => "n"
       ],
@@ -201,7 +201,7 @@ $products = [
         "duration" => 3.13,
         "age" => 15,
         "photo" => "https://i.scdn.co/image/ab67616d0000b2731fc2f5ab28c832a1094df62b",
-        "photo2" => "",
+        "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
         "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
         "description" => "o"
       ],
@@ -214,7 +214,7 @@ $products = [
         "duration" => 3.14,
         "age" => 16,
         "photo" => "https://i.scdn.co/image/ab67616d0000b2731f13ee83ecc3a4bc08dce62b",
-        "photo2" => "",
+        "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
         "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
         "description" => "p"
       ],
@@ -227,7 +227,7 @@ $products = [
         "duration" => 5.09,
         "age" => 17,
         "photo" => "https://i.scdn.co/image/ab67616d0000b2734bd80a0cd131f21debd0d07d",
-        "photo2" => "",
+        "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
         "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
         "description" => "q"
       ],
@@ -240,7 +240,7 @@ $products = [
           "duration" => 3.46,
           "age" => 18,
           "photo" => "https://i.scdn.co/image/ab67616d0000b27363bbb4ed7019cd5d3c515d08",
-          "photo2" => "",
+          "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
           "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
           "description" => "r"
       ],
@@ -253,7 +253,7 @@ $products = [
         "duration" => 5.19,
         "age" => 19,
         "photo" => "https://i.scdn.co/image/ab67616d0000b273d887b8e4146632d47ab0c6ee",
-        "photo2" => "",
+        "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
         "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
         "description" => "s"
       ],
@@ -266,7 +266,7 @@ $products = [
         "duration" => 3.54,
         "age" => 20,
         "photo" => "https://i.scdn.co/image/ab67616d0000b273b46c6f2180b6a41487fed6d0",
-        "photo2" => "",
+        "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
         "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
         "description" => "t"
       ],
@@ -279,7 +279,7 @@ $products = [
           "duration" => 4.30,
           "age" => 21,
           "photo" => "https://i.scdn.co/image/ab67616d0000b2734ae9002283502758b498d615",
-          "photo2" => "",
+          "photo2" => "https://i.ibb.co/dQdCpJR/Schermafbeelding-2024-04-05-135233.png",
           "photo3" => "https://yt3.googleusercontent.com/EDeu7hGMmVz7KDi6HdNFGFGeWt2TzPg-rGIUd3Jbl72Tge-Wuh1ZU6dUsge1NFsdMGxZCduQMw=s176-c-k-c0x00ffffff-no-rj",
           "description" => "u"
       ],
