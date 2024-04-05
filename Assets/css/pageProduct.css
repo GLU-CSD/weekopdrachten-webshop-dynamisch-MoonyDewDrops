@@ -71,7 +71,7 @@ body {
 }
 
 
-
+/* Thing that fixes layout problems */
 @media all and (max-width: 1150px) {
 
   #overviewProduct {

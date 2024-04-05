@@ -11,12 +11,12 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/0TopBalk.css">
-  <link rel="stylesheet" href="assets/css/1navigationBalk.css">
-  <link rel="stylesheet" href="assets/css/2Filter.css">
-  <link rel="stylesheet" href="assets/css/3products.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/0TopBalk.css">
+  <link rel="stylesheet" href="/assets/css/1navigationBalk.css">
+  <link rel="stylesheet" href="/assets/css/2Filter.css">
+  <link rel="stylesheet" href="/assets/css/3products.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
 
   <meta name="description" content="">
 
@@ -26,11 +26,11 @@ session_start();
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="shortcut icon" href="assets/Images/favicon.ico">
+  <link rel="shortcut icon" href="/assets/Images/favicon.ico">
   <meta name="theme-color" content="#fafafa">
 
   <!--Thing that links the javascript to this document-->
-  <script defer src="assets/js/app.js"></script>
+  <script defer src="/assets/js/app.js"></script>
 
 </head>
 
@@ -57,7 +57,7 @@ session_start();
       //Cute lil foreach loop for the giggles
       foreach ($products as $product) {
       ?>
-      <!-- does all the info of the product so they're displayed correctly. Gathers them from the product array in the products.php file -->
+        <!-- does all the info of the product so they're displayed correctly. Gathers them from the product array in the products.php file -->
         <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
 
           <div id="product" class="product-item">

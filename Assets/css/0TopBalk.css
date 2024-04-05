@@ -87,6 +87,7 @@
 
 }
 
+/* responsive */
 @media only screen and (max-width: 450px) {
   .addons button {
     height: 35px;

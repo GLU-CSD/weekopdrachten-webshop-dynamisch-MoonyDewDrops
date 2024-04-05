@@ -10,13 +10,13 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="assets/css/0TopBalk.css">
-  <link rel="stylesheet" href="assets/css/1navigationBalk.css">
-  <link rel="stylesheet" href="assets/css/cartStyle.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/0TopBalk.css">
+  <link rel="stylesheet" href="/assets/css/1navigationBalk.css">
+  <link rel="stylesheet" href="/assets/css/cartStyle.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
 
   <!--Thing that links the javascript to this document-->
-  <script defer src="assets/js/app.js"></script>
+  <script defer src="/assets/js/app.js"></script>
 
   <title>Cart</title>
 </head>
@@ -64,7 +64,7 @@ session_start();
 
                 <div class="product-details">
 
-                <!-- Same here with the title n price, just gets the info from the product database. It can do this bcs its on the item of which the id
+                  <!-- Same here with the title n price, just gets the info from the product database. It can do this bcs its on the item of which the id
                 variable aligns with, so it does the things where the id is the same as the id in the array, n not sum else.
                 quick thing: if you have 1 in your array, and you have a variable which 1, and loops to find this (by doing if ($product['id'] = $id)),
                 it will then put all the requested info into the things, and not of 2, because we r not on 2, we're on 1. -->

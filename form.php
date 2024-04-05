@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Form</title>
-  <link rel="stylesheet" href="assets/css/0TopBalk.css">
-  <link rel="stylesheet" href="assets/css/1navigationBalk.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/formStyle.css">
+  <link rel="stylesheet" href="/assets/css/0TopBalk.css">
+  <link rel="stylesheet" href="/assets/css/1navigationBalk.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/formStyle.css">
 
   <meta name="description" content="">
 
@@ -19,10 +19,10 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="shortcut icon" href="assets/Images/favicon.ico">
+  <link rel="shortcut icon" href="/assets/Images/favicon.ico">
 
   <meta name="theme-color" content="#fafafa">
-  <link rel="shortcut icon" href="assets/Images/favicon.ico">
+  <link rel="shortcut icon" href="/assets/Images/favicon.ico">
 
   <!--Thing that links the javascript to this document-->
   <script defer src="assets/js/app.js"></script>
