@@ -55,6 +55,14 @@ session_start();
               $total = $product['price'] * $Amount;
               $btwAmnt = round(((21 / 100) * $total), 2);
               $WithBtw = $total + $btwAmnt;
+
+              $CorrectTotal = number_format($total, 2, ',', '');
+
+              $CorrectPrice = number_format($product['price'], 2, ',', '');
+
+              $CorrectBtwAmnt = number_format($btwAmnt, 2, ',', '');
+              $CorrectWithBtw = number_format($WithBtw, 2, ',', '');
+              
       ?>
 
               <div class="product">
@@ -69,23 +77,23 @@ session_start();
                 quick thing: if you have 1 in your array, and you have a variable which 1, and loops to find this (by doing if ($product['id'] = $id)),
                 it will then put all the requested info into the things, and not of 2, because we r not on 2, we're on 1. -->
                   <div class="name">Name: <?= $product['title'] ?></div>
-                  <div class="productPrice">Product price: €<?= $total ?></div>
-                  <div class="cartPrice">Individual product price: €<?= $product['price'] ?></div>
+                  <div class="productPrice">Product price: €<?= $CorrectTotal ?></div>
+                  <div class="cartPrice">Individual product price: €<?= $CorrectPrice ?></div>
                   <div class="amountInCart">Amount : <?= $Amount ?></div>
-                  <div class="totalPrice">Total Price: €<?= $total ?></div>
+                  <div class="totalPrice">Total Price: €<?= $CorrectTotal ?></div>
 
                 </div>
 
                 <!-- berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan) -->
                 <div class="btwClass">
 
-                  Btw: €<?= $btwAmnt ?>
+                  Btw: €<?= $CorrectBtwAmnt ?>
 
                 </div>
 
                 <div class="priceWbtw">
 
-                  Total price: €<?= $WithBtw ?>
+                  Total price: €<?= $CorrectWithBtw ?>
 
                 </div>
 
