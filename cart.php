@@ -1,6 +1,29 @@
 <?php
-//starts session
+// Start session
 session_start();
+
+// Include the database connection script
+include_once 'products.php'; // Assuming you've created this file
+
+// If there's a post with 'amountOf', add item to the cart
+if (isset($_POST['amountOf'])) {
+    // Get product ID and quantity from the form
+    $product_id = $_POST['id'];
+    $quantity = $_POST['amountOf'];
+
+    // Insert the item into the cart table
+    $sql = "INSERT INTO cart (product_id, quantity) VALUES ('$product_id', '$quantity')";
+    if ($conn->query($sql) === TRUE) {
+        echo "Item added to cart successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Fetch items from the cart table
+$sql = "SELECT products.*, cart.quantity FROM products INNER JOIN cart ON products.id = cart.product_id";
+$result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -34,92 +57,40 @@ session_start();
       <header style="font-size: 40px; text-align: center;">Cart</header>
       <br>
       <?php
-      include_once 'products.php';
-
-      //if there's a post w amountOf do the magic
-      if (isset($_POST['amountOf'])) {
-
-        //sets the thing as the post of amountOf
-        $_SESSION['cart'][$_POST['id']] = $_POST['amountOf'];
-
-        //for every thing in the session, does id as the key and amount as the value
-        foreach ($_SESSION['cart'] as $id => $Amount) {
-
-          //nother foreach loop, for every product (which will act as the other variable listed on the right)
-          foreach ($products as $product) {
-
-            //if the product id is equal to the variable of id excecutes the stuff
-            if ($product['id'] == $id) {
-
-              //math for the prices n stuff like that
-              $total = $product['price'] * $Amount;
-              $btwAmnt = round(((21 / 100) * $total), 2);
-              $WithBtw = $total + $btwAmnt;
-
-              $CorrectTotal = number_format($total, 2, ',', '');
-
-              $CorrectPrice = number_format($product['price'], 2, ',', '');
-
-              $CorrectBtwAmnt = number_format($btwAmnt, 2, ',', '');
-              $CorrectWithBtw = number_format($WithBtw, 2, ',', '');
-              
+      // Display cart items
+      if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+              // Display cart item details
       ?>
-
               <div class="product">
-
-                <!-- sets the image as the link that is said in the products database. -->
-                <img src="<?= $product['photo'] ?>" alt="Product Image" id="ImageStyle" style="height:200px;width:auto;">
-
+                <!-- Display product image -->
+                <img src="<?= $row['photo'] ?>" alt="Product Image" id="ImageStyle" style="height:200px;width:auto;">
                 <div class="product-details">
-
-                  <!-- Same here with the title n price, just gets the info from the product database. It can do this bcs its on the item of which the id
-                variable aligns with, so it does the things where the id is the same as the id in the array, n not sum else.
-                quick thing: if you have 1 in your array, and you have a variable which 1, and loops to find this (by doing if ($product['id'] = $id)),
-                it will then put all the requested info into the things, and not of 2, because we r not on 2, we're on 1. -->
-                  <div class="name">Name: <?= $product['title'] ?></div>
-                  <div class="productPrice">Product price: €<?= $CorrectTotal ?></div>
-                  <div class="cartPrice">Individual product price: €<?= $CorrectPrice ?></div>
-                  <div class="amountInCart">Amount : <?= $Amount ?></div>
-                  <div class="totalPrice">Total Price: €<?= $CorrectTotal ?></div>
-
+                  <!-- Display product name, quantity, and total price -->
+                  <div class="name">Name: <?= $row['title'] ?></div>
+                  <div class="productPrice">Product price: €<?= number_format($row['price'], 2, ',', '') ?></div>
+                  <div class="amountInCart">Amount: <?= $row['quantity'] ?></div>
+                  <div class="totalPrice">Total Price: €<?= number_format($row['price'] * $row['quantity'], 2, ',', '') ?></div>
                 </div>
-
-                <!-- berekening zal zijn (21 / 100) * totaal prijs. stop gwn in een variabel zo van $btw = (21/100) * totaal prijs(de variabel dan) -->
-                <div class="btwClass">
-
-                  Btw: €<?= $CorrectBtwAmnt ?>
-
-                </div>
-
-                <div class="priceWbtw">
-
-                  Total price: €<?= $CorrectWithBtw ?>
-
-                </div>
-
-                <br>
-
               </div>
-
-        <?php
-            }
-          }
-        }
-
-        ?>
-
-        <!-- cute lil buttons for paying and clearing the cart -->
-        <button id="Paying" onclick="location.href='form.php'">Pay?</button>
-        <button id="ClearCart" onclick="location.href='intercept.php'">Clear?</button>
-
       <?php
+          }
       } else {
-
-        echo 'Whoops, looks like your cart is empty. Maybe try adding a few things?';
+          // Display message if cart is empty
+          echo "Cart is empty";
       }
 
+      $conn->close();
       ?>
+      
+      <!-- Cute lil buttons for paying and clearing the cart -->
+      <div class="buttons">
+        <button id="Paying" onclick="location.href='form.php'">Pay?</button>
+        <form action="intercept.php" method="post">
+         <button type="submit" name="clear_cart" id="ClearCart">Clear?</button>
+        </form>
 
+      </div>
     </div>
 
     <?php

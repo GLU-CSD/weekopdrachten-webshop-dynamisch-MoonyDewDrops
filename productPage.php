@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product page</title>
 
@@ -22,11 +22,9 @@ session_start();
   <!--Thing that links the javascript to this document-->
   <script defer src="assets/js/ImageSelector.js"></script>
   <script defer src="assets/js/app.js"></script>
-
 </head>
 
 <body>
-
 
   <div class="container">
     <!-- Header -->
@@ -35,65 +33,60 @@ session_start();
     <!-- Product -->
     <div class="product">
       <?php
-      include_once 'products.php';
 
-      //if the get for id isnt empty, to the magic
       if (!empty($_GET['id'])) {
 
-        //sets the id variable as the get
         $id = $_GET['id'];
 
-        //sets the variable to false if that wasn't obvious
-        $productExist = false;
+        include_once 'products.php';
 
-        //cute foreach loop n stuff :3
-        foreach ($products as $product) {
+        $sql = "SELECT * FROM products WHERE id = $id";
+        $result = $conn->query($sql);
 
-          //if the product id (the one of the product array in the products.php file) is equal to the id variable (basically the Get['id])
-          if ($product['id'] == $id) {
-            //then the product exists :D Makes it so that i can do the 'product not found' stuff if it aint so easily
-            $productExist = true;
+
+        if ($result->num_rows > 0) {
+          $product = $result->fetch_assoc();
       ?>
-            <!-- here we're just setting all the data for the product gotten from the products.php file and used -->
-            <div id="overviewProduct">
-              <img src="<?= $product['photo'] ?>" alt="Big Image" id="bigImage">
-              <div id="overall">
-                <?= $product['title'] ?> <br> <br>
-                €<?= $product['price'] ?> <br> <br>
-                <form action="cart.php" method="post">
-                  <input type="number" name="amountOf" placeholder="1" style="width:10%;" min="1" required>
-                  <input type="hidden" name="id" value="<?= $product['id'] ?>">
-
-                  <button type="submit" id="description">
-                    Add to cart?
-                  </button>
-                </form>
-                <br><br>
-                <?= $product['description'] ?>
-              </div>
-
-              <div id="tinyImages">
-                <img src="<?= $product['photo'] ?>" alt="Tiny Image 1" class="tiniestImages">
-                <img src="<?= $product['photo2'] ?>" alt="Tiny Image 2" class="tiniestImages">
-                <img src="<?= $product['photo3'] ?>" alt="Tiny Image 3" class="tiniestImages">
-              </div>
+          <!-- Display product details -->
+          <div id="overviewProduct">
+            <img src="<?= $product['photo'] ?>" alt="Big Image" id="bigImage">
+            <div id="overall">
+              <?= $product['title'] ?> <br> <br>
+              €<?= $product['price'] ?> <br> <br>
+              <form action="cart.php" method="post">
+                <input type="number" name="amountOf" placeholder="1" style="width:10%;" min="1" required>
+                <input type="hidden" name="id" value="<?= $product['id'] ?>">
+                <button type="submit" id="description">
+                  Add to cart?
+                </button>
+              </form>
+              <br><br>
+              <?= $product['description'] ?>
             </div>
-      <?php
-          }
-        }
-      }
-      if (!$productExist) {
-        //Does this thing so if they cant find a product, you got this
-        echo 'Product not found';
-      }
 
+            <div id="tinyImages">
+              <img src="<?= $product['photo'] ?>" alt="Tiny Image 1" class="tiniestImages">
+              <img src="<?= $product['photo2'] ?>" alt="Tiny Image 2" class="tiniestImages">
+              <img src="<?= $product['photo3'] ?>" alt="Tiny Image 3" class="tiniestImages">
+            </div>
+          </div>
+      <?php
+        } else {
+
+          echo 'Product not found';
+        }
+
+        $conn->close();
+      } else {
+
+        echo 'Product ID is missing';
+      }
       ?>
     </div>
 
     <!-- Footer -->
     <?php include_once 'footer.php'; ?>
   </div>
-
 
 </body>
 
