@@ -1,12 +1,11 @@
 <?php
 session_start();
-
 ?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
@@ -29,47 +28,50 @@ session_start();
   <link rel="shortcut icon" href="assets/Images/favicon.ico">
   <meta name="theme-color" content="#fafafa">
 
-  <!--Thing that links the javascript to this document-->
   <script defer src="assets/js/app.js"></script>
-
 </head>
 
 <body>
-
-  <!--Container that contains everything-->
   <div class="container">
 
     <?php
     include_once 'header.php';
-
     include_once 'filter.php';
-
-    include_once 'products.php';
     ?>
 
-    <!--Thing where products r inside-->
     <div class="products">
 
-      <!--the start of the products. Has the cover image of the song, n height&width inside it. 
-    Inside here r the image, name, price & add to cart button-->
-
       <?php
-      //Cute lil foreach loop for the giggles
-      foreach ($products as $product) {
-      ?>
-        <!-- does all the info of the product so they're displayed correctly. Gathers them from the product array in the products.php file -->
-        <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
+      //Database connection
+      include_once 'products.php'; //(the one above this one)
 
-          <div class="product-item">
+      // Check if id is good or whateva
+      if (isset($_GET['id'])) {
+        // protection
+        $id = intval($_GET['id']);
+        // getting stuff based off id
+        $sql = "SELECT * FROM products WHERE id = $id";
+        $result = $conn->query($sql);
 
-            <img src="<?= $product['photo'] ?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
-            <br> <br>
-            <?= $product['title'] ?>
-            <p>€<?= $product['price'] ?></p>
-
-          </div>
-        </a>
-      <?php
+        if ($result && $result->num_rows > 0) {
+          // Loop through the results
+          while ($product = $result->fetch_assoc()) {
+            ?>
+            <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
+              <div class="product-item">
+                <img src="<?= $product['photo'] ?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
+                <br> <br>
+                <?= $product['title'] ?>
+                <p>€<?= $product['price'] ?></p>
+              </div>
+            </a>
+          <?php
+          }
+        } else {
+          echo "No product found with the provided ID";
+        }
+      } else {
+        echo "No ID provided";
       }
       ?>
 
@@ -79,7 +81,6 @@ session_start();
         <p>1, 2, 3, 4 ... 10</p>
 
       </div>
-
     </div>
 
     <?php
@@ -87,7 +88,6 @@ session_start();
     ?>
 
   </div>
-
 </body>
 
 </html>
