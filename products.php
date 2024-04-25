@@ -290,39 +290,39 @@ $products = [
 ];
 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Still gotta add this";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "Still gotta add this";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
 
-foreach ($products as $product) {
-    $sql = "INSERT INTO products (id, title, category, price, sale, duration, age, photo, photo2, photo3, description) VALUES (
-        '{$product['id']}',
-        '{$product['title']}',
-        '{$product['category']}',
-        '{$product['price']}',
-        '{$product['sale']}',
-        '{$product['duration']}',
-        '{$product['age']}',
-        '{$product['photo']}',
-        '{$product['photo2']}',
-        '{$product['photo3']}',
-        '{$product['description']}'
-    )";
+// foreach ($products as $product) {
+//     $sql = "INSERT INTO products (id, title, category, price, sale, duration, age, photo, photo2, photo3, description) VALUES (
+//         '{$product['id']}',
+//         '{$product['title']}',
+//         '{$product['category']}',
+//         '{$product['price']}',
+//         '{$product['sale']}',
+//         '{$product['duration']}',
+//         '{$product['age']}',
+//         '{$product['photo']}',
+//         '{$product['photo2']}',
+//         '{$product['photo3']}',
+//         '{$product['description']}'
+//     )";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully<br>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
+//     if ($conn->query($sql) === TRUE) {
+//         echo "New record created successfully<br>";
+//     } else {
+//         echo "Error: " . $sql . "<br>" . $conn->error;
+//     }
+// }
 
-$conn->close();
+// $conn->close();
 
-?>
+// ?>
