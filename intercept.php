@@ -1,11 +1,16 @@
 <?php
 session_start();
 
+//gets stuff
 if (isset($_POST['clear_cart'])) {
+  //unsets session
   session_unset();
+
+  //the sql command :3
   $sql = "DELETE FROM cart";
   include_once 'products.php';
-  
+
+  //the stuff to acc delete it. Also got the error thing to keep it safe (not sure, wasn't specified in guide i watched :3)
   try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

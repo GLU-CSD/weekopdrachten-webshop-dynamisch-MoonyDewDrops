@@ -3,9 +3,11 @@ session_start();
 
 include_once 'products.php';
 
+//sql command
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 
+//thing to do the stuff so i can call it in the body of the html
 if ($result->num_rows > 0) {
   $products = array();
   while ($row = $result->fetch_assoc()) {
