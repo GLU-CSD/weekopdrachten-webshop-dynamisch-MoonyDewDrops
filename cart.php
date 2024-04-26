@@ -32,6 +32,8 @@ $result = $conn->query($sql);
   <link rel="stylesheet" href="assets/css/cartStyle.css">
   <link rel="stylesheet" href="assets/css/footer.css">
 
+  <link rel="shortcut icon" href="assets/Images/favicon.ico">
+
   <!--Thing that links the javascript to this document-->
   <script defer src="assets/js/app.js"></script>
 

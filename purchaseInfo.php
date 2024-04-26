@@ -34,6 +34,8 @@ session_unset();
   <link rel="stylesheet" href="assets/css/purchase.css">
   <link rel="stylesheet" href="assets/css/footer.css">
 
+  <link rel="shortcut icon" href="assets/Images/favicon.ico">
+
   <!--Thing that links the javascript to this document-->
   <script defer src="assets/js/app.js"></script>
 
