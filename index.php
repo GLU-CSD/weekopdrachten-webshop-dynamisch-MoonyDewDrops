@@ -1,22 +1,18 @@
 <?php
 session_start();
 
-    include_once 'products.php';
+include_once 'products.php';
 
-    // Fetch products from the database
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 
-// Check if there are any products
 if ($result->num_rows > 0) {
-    $products = array();
-    // Fetch each row of the result as an associative array and add it to the products array
-    while ($row = $result->fetch_assoc()) {
-        $products[] = $row;
-    }
+  $products = array();
+  while ($row = $result->fetch_assoc()) {
+    $products[] = $row;
+  }
 } else {
-    // If no products found, you can handle it accordingly
-    echo "No products found";
+  echo "No products found";
 }
 
 $conn->close();
@@ -62,22 +58,22 @@ $conn->close();
 
     <div class="products">
       <?php
-      
+
       if (isset($products)) {
-          foreach ($products as $product) {
+        foreach ($products as $product) {
       ?>
-        <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
-          <div class="product-item">
-            <img src="<?= $product['photo'] ?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
-            <br> <br>
-            <?= $product['title'] ?>
-            <p>€<?= $product['price'] ?></p>
-          </div>
-        </a>
+          <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
+            <div class="product-item">
+              <img src="<?= $product['photo'] ?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
+              <br> <br>
+              <?= $product['title'] ?>
+              <p>€<?= $product['price'] ?></p>
+            </div>
+          </a>
       <?php
-          }
+        }
       } else {
-          echo "No products available.";
+        echo "No products available.";
       }
       ?>
       <div id="nextPage" class="skip">

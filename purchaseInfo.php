@@ -3,6 +3,23 @@ session_start();
 //this makes it so that once you are at this page, your cart empties and it doesn't display anything anymore. Else, it would just 
 //still be in your cart, whilst you've already bought your selected item.
 session_unset();
+
+// include_once 'products.php';
+
+// $sql = "SELECT * FROM cart";
+// $result = $conn->query($sql);
+
+// if ($result->num_rows > 0) {
+//   $cart = array();
+//   while ($row = $result->fetch_assoc()) {
+//     $cart[] = $row;
+//   }
+// } else {
+//   echo "No products found";
+// }
+
+// $conn->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +48,10 @@ session_unset();
 
     <div class="info">
       Thank you for your order! Here is the information of your order:
+<!-- 
+       <?php //foreach ()
+       // $products['title']
+      ?> -->
 
 
       Thank you again for shopping with us!
@@ -45,3 +66,7 @@ session_unset();
 </body>
 
 </html>
+
+<!-- <?php
+// session_unset();
+?> -->
