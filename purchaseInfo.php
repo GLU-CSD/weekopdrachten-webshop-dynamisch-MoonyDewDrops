@@ -4,7 +4,7 @@ session_start();
 //still be in your cart, whilst you've already bought your selected item.
 session_unset();
 
-// include_once 'products.php';
+// include_once 'connection.php';
 
 // $sql = "SELECT * FROM cart";
 // $result = $conn->query($sql);

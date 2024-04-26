@@ -8,7 +8,7 @@ if (isset($_POST['clear_cart'])) {
 
   //the sql command :3
   $sql = "DELETE FROM cart";
-  include_once 'products.php';
+  include_once 'connection.php';
 
   //the stuff to acc delete it. Also got the error thing to keep it safe (not sure, wasn't specified in guide i watched :3)
   try {

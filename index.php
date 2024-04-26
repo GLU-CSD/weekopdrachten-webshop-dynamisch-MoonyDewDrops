@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once 'products.php';
+include_once 'connection.php';
 
 //sql command
 $sql = "SELECT * FROM products";

@@ -38,7 +38,7 @@ session_start();
 
         $id = $_GET['id'];
 
-        include_once 'products.php';
+        include_once 'connection.php';
 
         $sql = "SELECT * FROM products WHERE id = $id";
         $result = $conn->query($sql);
