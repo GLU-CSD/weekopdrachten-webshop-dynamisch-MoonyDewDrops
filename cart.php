@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-include_once 'connection.php';
-//getting the stuff
-if (isset($_POST['amountOf'])) {
+  include_once 'connection.php';
+  //getting the stuff
+  if (isset($_POST['amountOf'])) {
 
   //the variables for the data that will go into the database down by the $sql variable
   $product_id = $_POST['id'];

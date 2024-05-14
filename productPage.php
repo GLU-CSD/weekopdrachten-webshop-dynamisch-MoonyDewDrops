@@ -61,7 +61,7 @@ session_start();
                 </button>
               </form>
               <br><br>
-              <?= $product['description'] ?>
+              <?= $product['descriptions'] ?>
             </div>
 
             <div id="tinyImages">

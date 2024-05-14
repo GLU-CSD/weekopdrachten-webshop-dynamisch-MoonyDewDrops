@@ -48,7 +48,7 @@ session_unset();
     include 'header.php';
     ?>
 
-    <div class="info">
+   <div class="info">
       Thank you for your order! Here is the information of your order:
       <!-- 
        <?php //foreach ()
