@@ -6,15 +6,12 @@ include_once '../../connection.php';
 //checking if its a post
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //checking if girl aint starving[empty]
-    $productID = $_POST['productID'];
-    $title = $_POST['title'];
-    $category = $_POST['category'];
-    $price = $_POST['price'];
-    $photo = $_POST['photo'];
-    $description = $_POST['descriptions'];
+    $titel = $_POST['titel'];
+    $bericht = $_POST['bericht'];
+    $afbeelding = $_POST['afbeelding'];
 
     //sql command :33
-    $sql = "INSERT INTO products (productID, title, category, price, photo, descriptions) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO nieuwsbericht (titel, bericht, afbeelding) VALUES (?, ?, ?)";
 
     //querry thingy
     $insertqry = $conn->prepare($sql);
@@ -23,14 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo mysqli_error($conn);
     } else {
         //else it just updates!! :DD
-        $insertqry->bind_param('sssdss', $productID, $title, $category, $price, $photo, $description); 
+        $insertqry->bind_param('sss', $titel, $bericht, $afbeelding);
         if ($insertqry->execute()) {
             //if it succesfully adds the thing?>
                 <a href='index.php'>Added succesfully</a>
              <?php
         } else {
             //if it fails
-            echo "Error adding product: " . $insertqry->error;
+            echo "Error adding message: " . $insertqry->error;
         }
     }
     $insertqry->close();
