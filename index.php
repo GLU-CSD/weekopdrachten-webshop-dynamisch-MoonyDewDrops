@@ -78,6 +78,7 @@ $conn->close();
         echo "No products available.";
       }
       ?>
+
       <div id="nextPage" class="skip">
         <p>1, 2, 3, 4 ... 10</p>
       </div>

@@ -8,13 +8,14 @@
 <body>
 
 <?php
-  include_once 'admin/core/headers.php';
+  include_once '../core/headers.php';
 ?>
 
 <table>
   <thead>
     <tr>
       <th>ID</th>
+      <th>Product ID</th>
       <th>Title</th>
       <th>Category</th>
       <th>Price</th>
@@ -24,26 +25,25 @@
   </thead>
   <tbody>
   <?php
-    $sql = "SELECT productID, title, category, price, photo, descriptions FROM products;";
-    include 'connection.php';
+    $sql = "SELECT id, productID, title, category, price, photo, descriptions FROM products;";
+    include_once '../../connection.php';
 
-    $liqry = $con->prepare($sql);
+    $liqry = $conn->prepare($sql);
     if($liqry === false) {
-        echo mysqli_error($con);
+        echo mysqli_error($conn);
     } else {
         if($liqry->execute()) {
-            $liqry->bind_result($productID, $title, $category, $price, $photo, $description);
+            $liqry->bind_result($id, $productID, $title, $category, $price, $photo, $description);
             while($liqry->fetch()) {
                 ?>
                 <tr>
-                    <td>
-                        <a href="edit_product.php?product_id=<?=$productID;?>"><?=$productID;?></a>
-                    </td>
-                    <td><?php echo $title;?></td>
-                    <td><?php echo $category;?></td>
-                    <td><?php echo $price;?></td>
-                    <td><?php echo $photo;?></td>
-                    <td><?php echo $description;?></td> 
+                    <td><?=$id?></td>
+                    <td><?=$productID;?></td>
+                    <td><?=$title;?></td>
+                    <td><?=$category;?></td>
+                    <td><?=$price;?></td>
+                    <td><?=$photo;?></td>
+                    <td><?=$description;?></td> 
                 </tr>
                 <?php
             }
@@ -54,31 +54,78 @@
   </tbody>
 </table>
 
+<!-- form for adding products -->
+<div class="addProduct">
+  <p>Add a product</p>
+  <form action="add_product.php" method="post">
 
-<form action="add_product.php" method="post">
+    <label for="productID">Product ID:</label><br>
+    <input type="text" id="productID" name="productID"><br>
 
-  <label for="title">Title:</label><br>
-  <input type="text" id="title" name="title"><br>
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
 
-  <label for="category">Category:</label><br>
-  <input type="text" id="category" name="category"><br>
+    <label for="category">Category:</label><br>
+    <input type="text" id="category" name="category"><br>
 
-  <label for="price">Price:</label><br>
-  <input type="text" id="price" name="price"><br>
+    <label for="price">Price:</label><br>
+    <input type="text" id="price" name="price"><br>
 
-  <label for="photo">Photo:</label><br>
-  <input type="text" id="photo" name="photo"><br>
+    <label for="photo">Photo:</label><br>
+    <input type="text" id="photo" name="photo"><br>
 
-  <label for="descriptions">Description:</label><br>
-  <textarea id="descriptions" name="descriptions"></textarea><br>
-  
+    <label for="descriptions">Description:</label><br>
+    <textarea id="descriptions" name="descriptions"></textarea><br>
+    
   <input type="submit" value="Add Product">
-</form>
+  </form>
+</div>
 
+<br>
 
+<!-- form for editing products -->
+<div class="editProduct">
+  <p>Edit a product</p>
+  <form action="edit_product.php" method="post">
+
+    <label for="productID">Product ID of what you want to edit:</label><br>
+    <input type="text" id="productID" name="productID"><br>
+
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+
+    <label for="category">Category:</label><br>
+    <input type="text" id="category" name="category"><br>
+
+    <label for="price">Price:</label><br>
+    <input type="text" id="price" name="price"><br>
+
+    <label for="photo">Photo:</label><br>
+    <input type="text" id="photo" name="photo"><br>
+
+    <label for="descriptions">Description:</label><br>
+    <textarea id="descriptions" name="descriptions"></textarea><br>
+    
+  <input type="submit" value="Edit Product">
+  </form>
+</div>
+
+<br>
+
+<!-- form for deleting products -->
+<div class="deleteProduct">
+  <p>Delete a product</p>
+  <form action="delete_product.php" method="post">
+
+    <label for="productID">Product ID of what you want to delete:</label><br>
+    <input type="text" id="productID" name="productID"><br>
+    
+  <input type="submit" value="Delete Product">
+  </form>
+</div>
 
 <?php 
-  include_once 'admin/core/footers.php'; 
+  include_once '../core/footers.php'; 
 ?>
 
 </body>
