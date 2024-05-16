@@ -6,13 +6,13 @@ body {
 #overviewProduct {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 0.25fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 5% 5%;
   grid-auto-flow: row;
   grid-template-areas:
     "bigImage overall"
     "bigImage overall"
-    "bigImage overall"
+    "tinyImages overall"
     "tinyImages blank"
   ;
 
@@ -51,6 +51,11 @@ body {
 #bigImage {
   height: 100%;
   width: 100%;
+
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 
   grid-area: 1 / 1 / 4 / 2;
 }

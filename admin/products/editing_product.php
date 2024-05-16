@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <!-- form for editing products -->
     <div class="editProduct">
         <p>Edit a product</p>
-        <form action="edit_product.php?id=<?= $id ?>" method="post">
+        <form action="edit_product.php?id=<?= $id ?>" method="post" enctype="multipart/form-data">
 
             <label for="productID">Product ID:</label><br>
             <input type="text" id="productID" name="productID"><br>
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <input type="text" id="price" name="price"><br>
 
             <label for="photo">Photo:</label><br>
-            <input type="text" id="photo" name="photo"><br>
+            <input type="file" id="photo" name="photo"><br>
 
             <label for="descriptions">Description:</label><br>
             <textarea id="descriptions" name="descriptions"></textarea><br>

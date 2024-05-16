@@ -49,7 +49,7 @@ session_start();
       ?>
           <!-- Display product details -->
           <div id="overviewProduct">
-            <img src="<?= $product['photo'] ?>" alt="Big Image" id="bigImage">
+            <img src="assets/Images/<?= $product['photo'] ?>" alt="Big Image" id="bigImage">
             <div id="overall">
               <?= $product['title'] ?> <br> <br>
               €<?= $product['price'] ?> <br> <br>
@@ -65,9 +65,9 @@ session_start();
             </div>
 
             <div id="tinyImages">
-              <img src="<?= $product['photo'] ?>" alt="Tiny Image 1" class="tiniestImages">
-              <img src="<?= $product['photo2'] ?>" alt="Tiny Image 2" class="tiniestImages">
-              <img src="<?= $product['photo3'] ?>" alt="Tiny Image 3" class="tiniestImages">
+              <img src="assets/Images/<?= $product['photo'] ?>" alt="Tiny Image 1" class="tiniestImages">
+              <img src="assets/Images/<?= $product['photo2'] ?>" alt="Tiny Image 2" class="tiniestImages">
+              <img src="assets/Images/<?= $product['photo3'] ?>" alt="Tiny Image 3" class="tiniestImages">
             </div>
           </div>
       <?php

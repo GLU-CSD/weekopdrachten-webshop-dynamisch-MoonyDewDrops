@@ -65,7 +65,7 @@ $result = $conn->query($sql);
       ?>
           <div class="product">
 
-            <img src="<?= $product['photo'] ?>" alt="Product Image" id="ImageStyle" style="height:200px;width:auto;">
+            <img src="assets/Images/<?= $product['photo'] ?>" alt="Product Image" id="ImageStyle" style="height:200px;width:auto;">
             <div class="product-details">
 
               <div class="name">Name: <?= $product['title'] ?></div>

@@ -66,7 +66,7 @@ $conn->close();
       ?>
           <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
             <div class="product-item">
-              <img src="<?= $product['photo'] ?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
+              <img src="assets/Images/<?=$product['photo'];?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
               <br> <br>
               <?= $product['title'] ?>
               <p>€<?= $product['price'] ?></p>

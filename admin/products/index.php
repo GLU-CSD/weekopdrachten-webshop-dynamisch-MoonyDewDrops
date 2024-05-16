@@ -63,25 +63,25 @@
   <!-- form for adding products -->
   <div class="addProduct">
     <p>Add a product</p>
-    <form action="add_product.php" method="post">
+    <form action="add_product.php" method="post" enctype="multipart/form-data">
 
       <label for="productID">Product ID:</label><br>
-      <input type="text" id="productID" name="productID"><br>
+      <input type="text" id="productID" name="productID" required><br>
 
       <label for="title">Title:</label><br>
-      <input type="text" id="title" name="title"><br>
+      <input type="text" id="title" name="title" required><br>
 
       <label for="category">Category:</label><br>
-      <input type="text" id="category" name="category"><br>
+      <input type="text" id="category" name="category" required><br>
 
       <label for="price">Price:</label><br>
-      <input type="text" id="price" name="price"><br>
+      <input type="number" id="price" name="price" min="1" required><br>
 
       <label for="photo">Photo:</label><br>
-      <input type="text" id="photo" name="photo"><br>
+      <input type="file" id="photo" name="photo" required><br>
 
       <label for="descriptions">Description:</label><br>
-      <textarea id="descriptions" name="descriptions"></textarea><br>
+      <textarea id="descriptions" name="descriptions" required></textarea><br>
 
       <input type="submit" value="Add Product">
     </form>

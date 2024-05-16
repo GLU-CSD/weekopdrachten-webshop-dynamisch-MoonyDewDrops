@@ -10,30 +10,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];
     $category = $_POST['category'];
     $price = $_POST['price'];
-    $photo = $_POST['photo'];
     $description = $_POST['descriptions'];
 
-    //sql command :33
-    $sql = "INSERT INTO products (productID, title, category, price, photo, descriptions) VALUES (?, ?, ?, ?, ?, ?)";
+    if(isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {
+        $photoName = $_FILES['photo']['name'];
+        $photoTempName = $_FILES['photo']['tmp_name'];
+        $photoSize = $_FILES['photo']['size'];
 
-    //querry thingy
-    $insertqry = $conn->prepare($sql);
-    //if there aint a update querry, show an error :3
-    if ($insertqry === false) {
-        echo mysqli_error($conn);
-    } else {
-        //else it just updates!! :DD
-        $insertqry->bind_param('sssdss', $productID, $title, $category, $price, $photo, $description); 
-        if ($insertqry->execute()) {
-            //if it succesfully adds the thing?>
-                <a href='index.php'>Added succesfully</a>
-             <?php
+        $wantedDirectory = '../../assets/Images/';
+        $wantedPath = $wantedDirectory . $photoName;
+
+        if(move_uploaded_file($photoTempName, $wantedPath)) {
+            $sql = "INSERT INTO products (productID, title, category, price, photo, descriptions) VALUES (?, ?, ?, ?, ?, ?)";
+            $insertqry = $conn->prepare($sql);
+
+            if ($insertqry === false) {
+                echo mysqli_error($conn);
+            } else {
+                $photo = $wantedPath;
+                $insertqry->bind_param('sssdss', $productID, $title, $category, $price, $photo, $description); 
+                if ($insertqry->execute()) {
+                    //if it succesfully adds the thing?>
+                    <a href='index.php'>Added succesfully</a>
+                <?php
+                } else {
+                    //if it fails
+                    echo "Error adding product: " . $insertqry->error;
+                }
+            }
+            $insertqry->close();
         } else {
-            //if it fails
-            echo "Error adding product: " . $insertqry->error;
+            echo "Error moving uploaded file.";
         }
+    } else {
+        echo "Error uploading file.";
     }
-    $insertqry->close();
 }
 
 $conn->close();
