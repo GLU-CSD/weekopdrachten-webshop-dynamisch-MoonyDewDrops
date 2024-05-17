@@ -61,6 +61,8 @@
   padding: 1%;
   overflow-y: scroll;
 
+  overflow: hidden;
+
 }
 
 .addons button {

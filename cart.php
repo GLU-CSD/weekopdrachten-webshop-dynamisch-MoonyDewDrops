@@ -56,11 +56,14 @@ $result = $conn->query($sql);
         //a while loop to do the things
         while ($product = $result->fetch_assoc()) {
 
-          $btwMath = ($product['price'] / 100 * 21) * $product['quantity'];
-          $priceWbtwMath = ($product['price'] + $btwMath) * $product['quantity'];
+          $totals = $product['price'] * $product['quantity'];
 
+          $btwMath = (($product['price'] * $product['quantity']) / 100 * 21);
+          $priceWbtwMath = ($product['price'] * $product['quantity']) + ((($product['price'] * $product['quantity']) / 100 * 21));
+          
+          $totalPrice = number_format($totals, 2, ',', '');
           $btw = number_format($btwMath, 2, ',', '');
-          $priceWbtw = number_format($product['price'] + $btwMath, 2, ',', '');
+          $priceWbtw = number_format($priceWbtwMath, 2, ',', '');
 
       ?>
           <div class="product">
@@ -69,10 +72,10 @@ $result = $conn->query($sql);
             <div class="product-details">
 
               <div class="name">Name: <?= $product['title'] ?></div>
-              <div class="productPrice">Product price: €<?= number_format($product['price'], 2, ',', '') ?></div>
+              <div class="productPrice">Single product price: €<?= number_format($product['price'], 2, ',', '') ?></div>
 
               <div class="amountInCart">Amount: <?= $product['quantity'] ?></div>
-              <div class="totalPrice">Total Price: €<?= number_format($product['price'] * $product['quantity'], 2, ',', '') ?></div>
+              <div class="totalPrice">Total Price: €<?=$totalPrice?></div>
 
               <div>Btw: €<?= $btw ?></div>
               <div>Price including Btw: €<?= $priceWbtw ?></div>

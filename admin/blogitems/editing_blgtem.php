@@ -5,6 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $id = $_GET['id'];
     }
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <!-- form for editing the messages -->
     <div class="editMessage">
         <p>Edit a message</p>
-        <form action="edit_blgtem.php?id=<?= $id ?>" method="post">
+        <form action="edit_blgtem.php?id=<?= $id ?>" method="post" enctype="multipart/form-data">
 
             <label for="titel">titel :</label><br>
             <input type="text" id="titel" name="titel"><br>
@@ -29,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <textarea id="bericht" name="bericht"></textarea><br>
 
             <label for="afbeelding">afbeelding:</label><br>
-            <input type="text" id="afbeelding" name="afbeelding"><br>
+            <input type="file" id="afbeelding" name="afbeelding"><br><br>
 
             <input type="submit" value="Edit Product">
         </form>

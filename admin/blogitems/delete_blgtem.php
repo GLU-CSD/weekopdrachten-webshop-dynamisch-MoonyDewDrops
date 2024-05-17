@@ -22,19 +22,35 @@ session_start();
             //setting the thing as the GET so we acc got sum to work with
             $id = $_GET['id'];
 
+            // Getting the afbeelding's path n stuff :3
+            $sql = "SELECT afbeelding FROM nieuwsbericht WHERE id = ?";
+
+            $stmt = $conn->prepare($sql);
+            //bind the question mark in the sql command to the variable. very useful my friend 
+            $stmt->bind_param("s", $id);
+            $stmt->execute();
+
+            //the binding shebang for the afbeelding n stuff
+            $stmt->bind_result($afbeelding);
+            $stmt->fetch();
+            $stmt->close();
+
             //the sql command :3
             $sql = "DELETE FROM nieuwsbericht WHERE id = ?";
 
             $stmt = $conn->prepare($sql);
-            //bind the question mark in the sql command to the variable. very useful my friend 
             $stmt->bind_param("s", $id);
 
             //checkin if its bein executed
             if ($stmt->execute()) {
                 //to see if there was any of the things affected, and if it isnt, it'll display an error
-                if ($stmt->affected_rows > 0) { ?>
+                if ($stmt->affected_rows > 0) {
+                    if (file_exists($afbeelding)) {
+                        unlink($afbeelding);
+                    }
+    ?>
                     <a href='index.php'>Deleted succesfully</a>
-                <?php
+    <?php
                 } else {
                     //error message :3
                     echo "No message found with the ID provided";

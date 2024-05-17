@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <input type="file" id="photo" name="photo"><br>
 
             <label for="descriptions">Description:</label><br>
-            <textarea id="descriptions" name="descriptions"></textarea><br>
+            <textarea id="descriptions" name="descriptions"></textarea><br><br>
 
             <input type="submit" value="Edit Product">
         </form>

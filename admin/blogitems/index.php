@@ -46,9 +46,9 @@
 
                             <td><?= $afeelding; ?> <br></td>
 
-                            <td><a href='editing_blgtem.php?id=<?= $id ?>'>Edit</a></td>
+                            <td><a href='editing_blgtem.php?id=<?=$id?>'>Edit</a></td>
 
-                            <td><a href='delete_blgtem.php?id=<?= $id ?>'>Delete</a></td>
+                            <td><a href='delete_blgtem.php?id=<?=$id?>'>Delete</a></td>
                         </tr>
             <?php
                     }
@@ -62,7 +62,7 @@
     <!-- form for adding the messages -->
     <div class="addMessage">
         <p>Add a message</p>
-        <form action="add_blgtem.php" method="post">
+        <form action="add_blgtem.php" method="post" enctype="multipart/form-data">
 
             <label for="titel">titel :</label><br>
             <input type="text" id="titel" name="titel"><br>
@@ -71,7 +71,9 @@
             <textarea id="bericht" name="bericht"></textarea><br>
 
             <label for="afbeelding">afbeelding:</label><br>
-            <input type="text" id="afbeelding" name="afbeelding"><br>
+            <input type="file" id="afbeelding" name="afbeelding"><br>
+
+            <br>
 
             <input type="submit" value="Add message">
         </form>
