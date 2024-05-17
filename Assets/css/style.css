@@ -17,6 +17,7 @@ body {
     "additional-info additional-info additional-info additional-info additional-info"
     "Filter products products products products"
     "Filter products products products products"
+    "Filter nextPage nextPage nextPage nextPage"
     "disclaimer disclaimer disclaimer disclaimer disclaimer";
   width: 80%;
   margin-left: 10%;
@@ -25,6 +26,22 @@ body {
   border: 2px solid #6495ED;
   height: auto;
   background-color: white;
+}
+
+/*Thing i already made for when i want to do other pages, like if i want 10 on each page. Maybe make a filter for how many products you want to show per page*/
+.nextPage {
+  grid-area: nextPage;
+  background-color: white;
+  padding: 5%;
+}
+
+#pager{
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  border: 2px solid #6495ED;
+  padding: 5%;
+  border-radius: 15px;
 }
 
 @media only screen and (max-width: 1040px) {

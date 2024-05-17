@@ -56,8 +56,8 @@ $result = $conn->query($sql);
         //a while loop to do the things
         while ($product = $result->fetch_assoc()) {
 
-          $btwMath = $product['price'] / 100 * 21;
-          $priceWbtwMath = $product['price'] + $btwMath;
+          $btwMath = ($product['price'] / 100 * 21) * $product['quantity'];
+          $priceWbtwMath = ($product['price'] + $btwMath) * $product['quantity'];
 
           $btw = number_format($btwMath, 2, ',', '');
           $priceWbtw = number_format($product['price'] + $btwMath, 2, ',', '');

@@ -66,7 +66,7 @@ $conn->close();
       ?>
           <a href="productPage.php?id=<?= $product['id'] ?>" style="text-decoration:none;color:black;">
             <div class="product-item">
-              <img src="assets/Images/<?=$product['photo'];?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
+              <img src="assets/Images/<?= $product['photo']; ?>" alt="<?= $product['title'] ?>" style="width: 100%; height: auto">
               <br> <br>
               <?= $product['title'] ?>
               <p>€<?= $product['price'] ?></p>
@@ -79,10 +79,15 @@ $conn->close();
       }
       ?>
 
-      <div id="nextPage" class="skip">
-        <p>1, 2, 3, 4 ... 10</p>
+
+    </div>
+
+    <div class="nextPage">
+      <div id="pager">
+        <p>1, 2, 3, 4 ... 10</p>     
       </div>
     </div>
+
 
     <?php
     include_once 'footer.php';

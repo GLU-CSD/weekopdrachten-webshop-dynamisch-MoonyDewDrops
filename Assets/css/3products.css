@@ -18,12 +18,11 @@ Where everything is sorted into a grid just like the .container class
     'product-item product-item product-item'
     'product-item product-item product-item'
     'product-item product-item product-item'
-    'product-item product-item product-item'
-    'nextPage nextPage nextPage';
+    'product-item product-item product-item';
 
   /*style*/
-
-  border: 2px solid #6495ED;
+  
+  /* border: 2px solid #6495ED; */
   background-color: white;
   color: #13293D;
   text-align: center;
@@ -53,13 +52,9 @@ Where everything is sorted into a grid just like the .container class
 /*Thing i already made for when i want to do other pages, like if i want 10 on each page. Maybe make a filter for how many products you want to show per page*/
 #nextPage {
   grid-area: nextPage;
-  border: 2px solid #6495ED;
   width: 80%;
-  margin-bottom: 20%;
-  margin-left: 5%;
-}
-
-.skip {
+  align-self: center;
+  justify-self: center;
   border: 2px solid #6495ED;
   background-color: white;
   padding: 5%;
@@ -103,8 +98,6 @@ Where everything is sorted into a grid just like the .container class
       /*10*/
       "product-item blank"
       /*11*/
-      "nextPage nextPage";
-    /*12*/
   }
 }
 
@@ -146,8 +139,6 @@ Where everything is sorted into a grid just like the .container class
       /*10*/
       "product-item"
       /*11*/
-      "nextPage";
-    /*12*/
   }
 
 }
