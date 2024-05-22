@@ -21,6 +21,7 @@ session_start();
         //setting the things as the posts so we acc got sum to work with    
         $id = $_GET['id'];
         $titel = $_POST['titel'];
+        $author = $_POST['author'];
         $bericht = $_POST['bericht'];
 
         $sql = "SELECT afbeelding FROM nieuwsbericht WHERE id = ?";
@@ -47,7 +48,7 @@ session_start();
 
                 $afbeelding = $wantedPath;
                 //sql command :33
-                $sql = "UPDATE nieuwsbericht SET titel = ?, bericht = ?, afbeelding = ? WHERE id = ?";
+                $sql = "UPDATE nieuwsbericht SET titel = ?, author = ?, bericht = ?, afbeelding = ? WHERE id = ?";
                 $updateqry = $conn->prepare($sql);
 
                 //if there aint a update querry, show an error :3
@@ -56,7 +57,7 @@ session_start();
                 } else {
                     //else it just updates!! :DD
                     $afbeelding = $wantedPath;
-                    $updateqry->bind_param('ssss', $titel, $bericht, $afbeelding, $id);
+                    $updateqry->bind_param('sssss', $titel, $author, $bericht, $afbeelding, $id);
                     if ($updateqry->execute()) {
                         //If it does its thang <3  ?>
                         <a href='index.php'>Updated succesfully</a>

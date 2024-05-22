@@ -27,6 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <label for="titel">titel :</label><br>
             <input type="text" id="titel" name="titel"><br>
 
+            <label for="author">author :</label><br>
+            <input type="text" id="author" name="author" required><br>
+
             <label for="bericht">bericht:</label><br>
             <textarea id="bericht" name="bericht"></textarea><br>
 

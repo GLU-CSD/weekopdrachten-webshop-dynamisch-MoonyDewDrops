@@ -7,6 +7,7 @@ include_once '../../connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //checking if girl aint starving[empty]
     $titel = $_POST['titel'];
+    $author = $_POST['author'];
     $bericht = $_POST['bericht'];
 
     if (isset($_FILES['afbeelding']) && $_FILES['afbeelding']['error'] === UPLOAD_ERR_OK) {
@@ -19,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (move_uploaded_file($afbeeldingTempName, $wantedPath)) {
 
             //sql command :33
-            $sql = "INSERT INTO nieuwsbericht (titel, bericht, afbeelding) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO nieuwsbericht (titel, author, bericht, afbeelding) VALUES (?, ?, ?, ?)";
 
             //querry thingy
             $insertqry = $conn->prepare($sql);
@@ -29,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 //else it just updates!! :DD
                 $afbeelding = $wantedPath;
-                $insertqry->bind_param('sss', $titel, $bericht, $afbeelding);
+                $insertqry->bind_param('ssss', $titel, $author, $bericht, $afbeelding);
                 if ($insertqry->execute()) {
                     //if it succesfully adds the thing
 ?>
